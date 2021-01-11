@@ -1,11 +1,18 @@
 import React from 'react'
-import { Container, Heading } from '@chakra-ui/react'
+import { Container, Heading,ChakraProvider} from '@chakra-ui/react'
+import Header from "./Components/Header";
+import AboutUs from "./Components/AboutUs";
+import Floating from "./Components/Floating";
+import Footer from "./Components/Footer";
 
 const Landing = () => {
     return (
-        <Container>
-            <Heading>Website</Heading>
-        </Container>
+        <ChakraProvider>
+            <Header/>
+            <AboutUs/>
+            <Footer/>
+            <Floating/>
+        </ChakraProvider>
     )
 }
 
