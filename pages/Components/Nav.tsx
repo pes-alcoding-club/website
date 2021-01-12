@@ -1,11 +1,11 @@
 import React from 'react'
-import { Container,Button, Heading,Divider,Link} from '@chakra-ui/react'
+import { Container,Button, Heading,Divider,Link,Text} from '@chakra-ui/react'
 const Nav = () => {
     return (
         <div style={{display:"flex",padding:"30px",width:"100%",justifyContent:"space-around"}}>
-            <Link>Register</Link>
-            <Link>Editorials</Link>
-            <Link>Contact Us</Link>
+            <Link _hover={{color:"#e94560"}} color="whitesmoke" style={{fontSize:"20px",fontWeight:"bold"}}>Register</Link>
+            <Link _hover={{color:"#e94560"}} color="whitesmoke" style={{fontSize:"20px",fontWeight:"bold"}}>Editorials</Link>
+            <Link _hover={{color:"#e94560"}} color="whitesmoke" style={{fontSize:"20px",fontWeight:"bold"}}>Contact Us</Link>
         </div>
 
     )
