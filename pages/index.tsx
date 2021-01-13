@@ -1,11 +1,22 @@
+import { ChakraProvider } from '@chakra-ui/react';
 import React from 'react';
-import { Container, Heading } from '@chakra-ui/react';
+import AboutUs from '../components/AboutUs';
+import Floating from '../components/Floating';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
+import Head from 'next/head';
 
 const Landing = () => {
     return (
-        <Container>
-            <Heading>Website</Heading>
-        </Container>
+        <ChakraProvider>
+            <Head>
+                <title>The Alcoding Club</title>
+            </Head>
+            <Header />
+            <AboutUs />
+            <Footer />
+            <Floating />
+        </ChakraProvider>
     );
 };
 
