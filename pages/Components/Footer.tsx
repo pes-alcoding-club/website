@@ -108,7 +108,6 @@ const Footer = () => {
                         }}
                     >
                         <div style={{ margin: '0px auto', display: 'flex' }}>
-                            <a href="https://www.instagram.com/thealcodingclub/">
                                 <Button
                                     _hover={{
                                         bg: '#bc2a8d',
@@ -118,10 +117,10 @@ const Footer = () => {
                                     to="https://www.instagram.com/thealcodingclub"
                                     style={{ display: 'flex', margin: '10px' }}
                                 >
+                                    <a href="https://www.instagram.com/thealcodingclub/">
                                     Instagram
-                                </Button>
                             </a>
-                            <a href="https://www.linkedin.com/company/the-alcoding-club/">
+                                </Button>
                                 <Button
                                     _hover={{
                                         bg: '#0e76a8',
@@ -133,10 +132,11 @@ const Footer = () => {
                                         />
                                     }
                                     style={{ display: 'flex', margin: '10px' }}
-                                >
+                                    >
+                                    <a href="https://www.linkedin.com/company/the-alcoding-club/">
                                     LinkedIn
+                                    </a>
                                 </Button>
-                            </a>
                             <Button
                                 _hover={{
                                     bg: '#DB4437',
