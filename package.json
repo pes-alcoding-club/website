@@ -6,7 +6,10 @@
   },
   "dependencies": {
     "@chakra-ui/react": "^1.1.2",
+<<<<<<< HEAD
     "@svgr/webpack": "^5.5.0",
+=======
+>>>>>>> e2749a404f6545f04a1c768a660cb5794c54220b
     "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
     "framer-motion": "^3.2.0",
