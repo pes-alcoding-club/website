@@ -69,6 +69,7 @@ const Header = () => {
                             textAlign: 'center',
                             margin: '10px 0 0 0',
                             fontSize: '65px',
+                            padding:"0 20px"
                         }}
                     >
                         The Alcoding Club
