@@ -6,7 +6,7 @@ import MediaQuery from 'react-responsive';
 
 const Footer = () => {
     return (
-        <>
+        <div style={{bottom:0}}>
             <MediaQuery minDeviceWidth={1224}>
                 <footer
                     style={{
@@ -159,7 +159,7 @@ const Footer = () => {
                     </div>
                 </footer>
             </MediaQuery>
-        </>
+        </div>
     );
 };
 export default Footer;

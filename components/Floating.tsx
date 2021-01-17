@@ -1,29 +1,32 @@
-import { Box, Button, Link, Text } from '@chakra-ui/react';
+import { Box, Button, Text } from '@chakra-ui/react';
 import React from 'react';
 import MediaQuery from 'react-responsive';
+import Link from 'next/link';
 
 const Floating = () => {
     const ans = '1';
     return (
         <>
             <MediaQuery minDeviceWidth={1224}>
-                <Button
-                    size="lg"
-                    _hover={{ textColor: 'whitesmoke' }}
-                    boxShadow="lg"
-                    bgColor="#e94560"
-                    style={{
-                        opacity: ans,
-                        position: 'fixed',
-                        bottom: '30px',
-                        right: '30px',
-                    }}
-                >
-                    Apply Now
-                </Button>
+                <Link href="/register">
+                    <Button
+                        size="lg"
+                        _hover={{ textColor: 'whitesmoke' }}
+                        boxShadow="lg"
+                        bgColor="#e94560"
+                        style={{
+                            opacity: ans,
+                            position: 'fixed',
+                            bottom: '30px',
+                            right: '30px',
+                        }}
+                    >
+                        Apply Now
+                    </Button>
+                </Link>
             </MediaQuery>
             <MediaQuery maxDeviceWidth={1224}>
-                <Link>
+                <Link href="/register">
                     <Box
                         _hover={{
                             color: 'whitesmoke',

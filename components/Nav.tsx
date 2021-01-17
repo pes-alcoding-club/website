@@ -1,7 +1,18 @@
-import { Link } from '@chakra-ui/react';
-import React from 'react';
+import { Link as L } from '@chakra-ui/react';
+import React, { FC } from 'react';
+import Link from 'next/link';
 
-const Nav = () => {
+interface props {
+    l1: String;
+    l2: String;
+    l3: String;
+}
+
+const Nav: FC<props> = ({ l1, l2, l3 }) => {
+    var lr = l2;
+    if (l2 == 'Home') {
+        lr = '/';
+    }
     return (
         <div
             style={{
@@ -11,27 +22,27 @@ const Nav = () => {
                 justifyContent: 'space-around',
             }}
         >
-            <Link
+            <L
                 _hover={{ color: '#e94560' }}
                 color="whitesmoke"
                 style={{ fontSize: '20px', fontWeight: 'bold' }}
             >
-                Register
-            </Link>
-            <Link
+                <Link href={String(l1)}>{l1}</Link>
+            </L>
+            <L
                 _hover={{ color: '#e94560' }}
                 color="whitesmoke"
                 style={{ fontSize: '20px', fontWeight: 'bold' }}
             >
-                Editorials
-            </Link>
-            <Link
+                <Link href={String(lr)}>{l2}</Link>
+            </L>
+            <L
                 _hover={{ color: '#e94560' }}
                 color="whitesmoke"
                 style={{ fontSize: '20px', fontWeight: 'bold' }}
             >
-                Contact Us
-            </Link>
+                <Link href={String(l2)}>{l3}</Link>
+            </L>
         </div>
     );
 };
