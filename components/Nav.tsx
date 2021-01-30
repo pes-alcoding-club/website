@@ -27,21 +27,21 @@ const Nav: FC<props> = ({ l1, l2, l3 }) => {
                 color="whitesmoke"
                 style={{ fontSize: '20px', fontWeight: 'bold' }}
             >
-                <Link href={String(l1)}>{l1}</Link>
+                <Link href={l1.toLowerCase()}>{l1}</Link>
             </L>
             <L
                 _hover={{ color: '#e94560' }}
                 color="whitesmoke"
                 style={{ fontSize: '20px', fontWeight: 'bold' }}
             >
-                <Link href={String(lr)}>{l2}</Link>
+                <Link href={lr.toLowerCase()}>{l2}</Link>
             </L>
             <L
                 _hover={{ color: '#e94560' }}
                 color="whitesmoke"
                 style={{ fontSize: '20px', fontWeight: 'bold' }}
             >
-                <Link href={String(l2)}>{l3}</Link>
+                <Link href={l3=="Contact Us"?"contactus":l3.toLowerCase()}>{l3}</Link>
             </L>
         </div>
     );

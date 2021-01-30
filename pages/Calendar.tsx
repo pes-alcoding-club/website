@@ -7,7 +7,7 @@ import MediaQuery from 'react-responsive';
 
 const Calendar = () => {
     return (
-        <ChakraProvider>
+        <>
             <Head>
                 <title>Calendar</title>
             </Head>
@@ -105,7 +105,7 @@ const Calendar = () => {
                 </div>
                 <Footer />
             </MediaQuery>
-        </ChakraProvider>
+        </>
     );
 };
 
