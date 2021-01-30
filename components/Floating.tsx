@@ -13,6 +13,7 @@ const Floating = () => {
                     boxShadow="lg"
                     bgColor="#e94560"
                     style={{
+                        zIndex: 100,
                         opacity: 1,
                         position: 'fixed',
                         bottom: '30px',

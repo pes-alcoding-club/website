@@ -1,11 +1,10 @@
-import { Box, ChakraProvider } from '@chakra-ui/react';
+import Head from 'next/head';
 import React from 'react';
 import AboutUs from '../components/AboutUs';
+import Carousel from '../components/Carousel';
 import Floating from '../components/Floating';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import Head from 'next/head';
-import Carousel from '../components/Carousel';
 
 const Landing = () => {
     return (

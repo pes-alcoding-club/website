@@ -1,9 +1,9 @@
-import { ChakraProvider, Heading, Divider, Text } from '@chakra-ui/react';
-import React, { FC } from 'react';
-import Footer from '../components/Footer';
+import { Divider, Heading, Text } from '@chakra-ui/react';
 import Head from 'next/head';
-import Nav from '../components/Nav';
+import React from 'react';
 import MediaQuery from 'react-responsive';
+import Footer from '../components/Footer';
+import Nav from '../components/Nav';
 
 const Calendar = () => {
     return (
@@ -101,7 +101,7 @@ const Calendar = () => {
                             height: '800px',
                             margin: '20px auto 20px',
                         }}
-                    ></iframe>
+                    />
                 </div>
                 <Footer />
             </MediaQuery>

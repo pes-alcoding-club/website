@@ -1,14 +1,11 @@
-import { Box, Image } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
+import Image from 'next/image';
 import React, { useState } from 'react';
 import { FaArrowCircleRight, FaArrowCircleLeft } from 'react-icons/fa';
 import MediaQuery from 'react-responsive';
 // help from: https://www.youtube.com/watch?v=l1MYfu5YWHc :)
 
-const images = [
-    'https://lh3.googleusercontent.com/pw/ACtC-3eAOr_3m8nkwHFxUGVCocpqAsfRXF9iBmFBJ9Vsu6cUNNBf1KblJizIy-ouzALEPFiO3cPxHnBdcnGmWSzupTLDEdmjrjyTsEiG9OnGPSL_Oq8VED1IQ3Wn3MSpokTIJXZANbbmcmg3Loq_rv-YK_8jJQ=w1258-h944-no?authuser=0',
-    'https://lh3.googleusercontent.com/pw/ACtC-3eRo1AoiFwa2Ae5_SHXdEWVHcCEOIELaImOC832EgsRSCjUmjfXXEPd9QMvYfiHfCW9yJhZWFc_Zj0pwBMcBf4MeqOEV-QwLYD8CTOjzWudM8BcO1Zj-cnOtQGdliJ8ggUliYJcorb-tbWrOGob4eXCAA=w1258-h944-no?authuser=0',
-    'https://lh3.googleusercontent.com/pw/ACtC-3cnkp2xlwwIbF8sYZ4U3ODlOg4MHlX4UNA2ZhM8XQ01IYLkT5ig7VmCMyHoJHz2-cBehp4_7kwn7jK7d5ruXbLUeLiqtHjuglkXUX4j8bll4x0AjNzZg9424ep6VQqEgCh9TOUdhc3qGgEoAmMt_PFLzg=w1258-h944-no?authuser=0',
-];
+const images = ['/img1.jpg', '/img2.jpg', '/img3.jpg', '/img4.jpg'];
 
 const Carousel = () => {
     const [current, setCurrent] = useState<number>(0);
@@ -52,7 +49,7 @@ const Carousel = () => {
                             })`}
                         >
                             {key === current && (
-                                <Image w="600px" h="400px" src={src} />
+                                <Image width="678px" height="456px" src={src} />
                             )}
                         </Box>
                     ))}
@@ -104,7 +101,7 @@ const Carousel = () => {
                             })`}
                         >
                             {key === current && (
-                                <Image w="328px" h="216px" src={src} />
+                                <Image width="337px" height="236px" src={src} />
                             )}
                         </Box>
                     ))}
