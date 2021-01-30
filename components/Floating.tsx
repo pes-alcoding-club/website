@@ -3,7 +3,6 @@ import React from 'react';
 import MediaQuery from 'react-responsive';
 
 const Floating = () => {
-    const ans = '1';
     return (
         <>
             <MediaQuery minDeviceWidth={1224}>
@@ -13,7 +12,7 @@ const Floating = () => {
                     boxShadow="lg"
                     bgColor="#e94560"
                     style={{
-                        opacity: ans,
+                        opacity: 1,
                         position: 'fixed',
                         bottom: '30px',
                         right: '30px',
@@ -35,6 +34,7 @@ const Floating = () => {
                             bottom: '0',
                             width: '100%',
                             height: '80px',
+                            zIndex: 100,
                             position: 'fixed',
                         }}
                     >
