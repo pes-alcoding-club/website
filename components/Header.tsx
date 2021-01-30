@@ -3,10 +3,11 @@ import React from 'react';
 import MediaQuery from 'react-responsive';
 import Logo from '../assets/Logo.svg';
 import Nav from './Nav';
+import Link from 'next/link';
 
 const Header = () => {
     return (
-        <>
+        <div>
             <MediaQuery minDeviceWidth={1224}>
                 <div
                     style={{
@@ -34,15 +35,20 @@ const Header = () => {
                     >
                         The Alcoding Club
                     </Heading>
-                    <Button
-                        size="lg"
-                        _hover={{ bg: '#0f3460', textColor: 'whitesmoke' }}
-                        bgColor="#e94560"
-                        style={{ margin: '30px auto 90px', display: 'block' }}
-                    >
-                        Apply To Our Monthly Challenge
-                    </Button>
-                    <Nav />
+                    <Link href="/register">
+                        <Button
+                            size="lg"
+                            _hover={{ bg: '#0f3460', textColor: 'whitesmoke' }}
+                            bgColor="#e94560"
+                            style={{
+                                margin: '30px auto 90px',
+                                display: 'block',
+                            }}
+                        >
+                            Apply To Our Monthly Challenge
+                        </Button>
+                    </Link>
+                    <Nav l1="Calendar" l2="Editorial" l3="Contact Us" />
                     <Divider />
                 </div>
             </MediaQuery>
@@ -75,19 +81,25 @@ const Header = () => {
                     >
                         The Alcoding Club
                     </Heading>
-                    <Button
-                        size="lg"
-                        _hover={{ bg: '#0f3460', textColor: 'whitesmoke' }}
-                        bgColor="#e94560"
-                        style={{ margin: '30px auto 90px', display: 'block' }}
-                    >
-                        Apply To Our Monthly Challenge
-                    </Button>
-                    <Nav />
+                    <Link href="/register">
+                        <Button
+                            size="lg"
+                            _hover={{ bg: '#0f3460', textColor: 'whitesmoke' }}
+                            bgColor="#e94560"
+                            style={{
+                                margin: '30px auto 90px',
+                                display: 'block',
+                            }}
+                            href="/about"
+                        >
+                            Apply To Our Monthly Challenge
+                        </Button>
+                    </Link>
+                    <Nav l1="Calendar" l2="Editorials" l3="Contact Us" />
                     <Divider />
                 </div>
             </MediaQuery>
-        </>
+        </div>
     );
 };
 export default Header;
