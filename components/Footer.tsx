@@ -61,6 +61,7 @@ const Footer = () => {
                                     LinkedIn
                                 </Button>
                             </a>
+                            <a href="mailto:alcoding@pes.edu">
                             <Button
                                 _hover={{
                                     bg: '#DB4437',
@@ -79,6 +80,7 @@ const Footer = () => {
                             >
                                 Mail
                             </Button>
+                                </a>
                         </div>
                     </div>
                 </footer>
@@ -142,6 +144,7 @@ const Footer = () => {
                                     bg: '#DB4437',
                                     textColor: 'whitesmoke',
                                 }}
+                                to="mailto:alcoding@pes.edu"
                                 leftIcon={
                                     <SiGmail
                                         style={{ margin: '0 5px 0 5px' }}
@@ -153,7 +156,9 @@ const Footer = () => {
                                     padding: '0 27px',
                                 }}
                             >
+                                <a href="mailto:alcoding@pes.edu">
                                 Mail
+                                </a>
                             </Button>
                         </div>
                     </div>
