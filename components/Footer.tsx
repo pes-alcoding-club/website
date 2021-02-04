@@ -62,24 +62,24 @@ const Footer = () => {
                                 </Button>
                             </a>
                             <a href="mailto:alcoding@pes.edu">
-                                <Button
-                                    _hover={{
-                                        bg: '#DB4437',
-                                        textColor: 'whitesmoke',
-                                    }}
-                                    leftIcon={
-                                        <SiGmail
-                                            style={{ margin: '0 5px 0 5px' }}
-                                        />
-                                    }
-                                    style={{
-                                        display: 'flex',
-                                        margin: '10px',
-                                        padding: '0 27px',
-                                    }}
-                                >
-                                    Mail
-                                </Button>
+                            <Button
+                                _hover={{
+                                    bg: '#DB4437',
+                                    textColor: 'whitesmoke',
+                                }}
+                                leftIcon={
+                                    <SiGmail
+                                        style={{ margin: '0 5px 0 5px' }}
+                                    />
+                                }
+                                style={{
+                                    display: 'flex',
+                                    margin: '10px',
+                                    padding: '0 27px',
+                                }}
+                            >
+                                Mail
+                            </Button>
                             </a>
                         </div>
                     </div>
@@ -110,56 +110,55 @@ const Footer = () => {
                         }}
                     >
                         <div style={{ margin: '0px auto', display: 'flex' }}>
-                            <a href="https://www.instagram.com/thealcodingclub/">
-                                <Button
-                                    _hover={{
-                                        bg: '#bc2a8d',
-                                        textColor: 'whitesmoke',
-                                    }}
-                                    leftIcon={<FaInstagram />}
-                                    to="https://www.instagram.com/thealcodingclub"
-                                    style={{ display: 'flex', margin: '10px' }}
-                                >
+                            <Button
+                                _hover={{
+                                    bg: '#bc2a8d',
+                                    textColor: 'whitesmoke',
+                                }}
+                                leftIcon={<FaInstagram />}
+                                to="https://www.instagram.com/thealcodingclub"
+                                style={{ display: 'flex', margin: '10px' }}
+                            >
+                                <a href="https://www.instagram.com/thealcodingclub/">
                                     Instagram
-                                </Button>
-                            </a>
-                            <a href="https://www.linkedin.com/company/the-alcoding-club/">
-                                <Button
-                                    _hover={{
-                                        bg: '#0e76a8',
-                                        textColor: 'whitesmoke',
-                                    }}
-                                    leftIcon={
-                                        <FaLinkedin
-                                            style={{ margin: '0 3px 0 3px' }}
-                                        />
-                                    }
-                                    style={{ display: 'flex', margin: '10px' }}
-                                >
+                                </a>
+                            </Button>
+                            <Button
+                                _hover={{
+                                    bg: '#0e76a8',
+                                    textColor: 'whitesmoke',
+                                }}
+                                leftIcon={
+                                    <FaLinkedin
+                                        style={{ margin: '0 3px 0 3px' }}
+                                    />
+                                }
+                                style={{ display: 'flex', margin: '10px' }}
+                            >
+                                <a href="https://www.linkedin.com/company/the-alcoding-club/">
                                     LinkedIn
-                                </Button>
-                            </a>
-                            <a href="mailto:alcoding@pes.edu">
-                                <Button
-                                    _hover={{
-                                        bg: '#DB4437',
-                                        textColor: 'whitesmoke',
-                                    }}
-                                    to="mailto:alcoding@pes.edu"
-                                    leftIcon={
-                                        <SiGmail
-                                            style={{ margin: '0 5px 0 5px' }}
-                                        />
-                                    }
-                                    style={{
-                                        display: 'flex',
-                                        margin: '10px',
-                                        padding: '0 27px',
-                                    }}
-                                >
-                                    Mail
-                                </Button>
-                            </a>
+                                </a>
+                            </Button>
+                            <Button
+                                _hover={{
+                                    bg: '#DB4437',
+                                    textColor: 'whitesmoke',
+                                }}
+                                leftIcon={
+                                    <SiGmail
+                                        style={{ margin: '0 5px 0 5px' }}
+                                    />
+                                }
+                                style={{
+                                    display: 'flex',
+                                    margin: '10px',
+                                    padding: '0 27px',
+                                }}
+                            >
+                                <a href="mailto:alcoding@pes.edu">
+                                Mail
+                                </a>
+                            </Button>
                         </div>
                     </div>
                 </footer>
