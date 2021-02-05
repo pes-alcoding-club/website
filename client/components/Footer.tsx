@@ -6,7 +6,7 @@ import MediaQuery from 'react-responsive';
 
 const Footer = () => {
     return (
-        <div style={{bottom:0}}>
+        <div style={{ bottom: 0 }}>
             <MediaQuery minDeviceWidth={1224}>
                 <footer
                     style={{
@@ -61,6 +61,7 @@ const Footer = () => {
                                     LinkedIn
                                 </Button>
                             </a>
+                            <a href="mailto:alcoding@pes.edu">
                             <Button
                                 _hover={{
                                     bg: '#DB4437',
@@ -79,6 +80,7 @@ const Footer = () => {
                             >
                                 Mail
                             </Button>
+                            </a>
                         </div>
                     </div>
                 </footer>
@@ -153,7 +155,9 @@ const Footer = () => {
                                     padding: '0 27px',
                                 }}
                             >
+                                <a href="mailto:alcoding@pes.edu">
                                 Mail
+                                </a>
                             </Button>
                         </div>
                     </div>
