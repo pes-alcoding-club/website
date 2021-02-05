@@ -12,7 +12,12 @@ const Landing = () => {
             <Head>
                 <title>The Alcoding Club</title>
             </Head>
-            <Header />
+            <Header
+                showApplyBtn
+                l1="Calander"
+                l2="Editorials"
+                l3="Contact Us"
+            />
             <AboutUs />
             <Carousel />
             <Footer />

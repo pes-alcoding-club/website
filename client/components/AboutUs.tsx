@@ -1,8 +1,7 @@
-import { Divider, Heading, Text } from '@chakra-ui/react';
+import { Divider, Heading, Link as L, Text } from '@chakra-ui/react';
+import Link from 'next/link';
 import React from 'react';
 import MediaQuery from 'react-responsive';
-import Link from 'next/link';
-import { Link as L } from '@chakra-ui/react';
 
 const AboutUs = () => {
     return (
@@ -34,9 +33,9 @@ const AboutUs = () => {
                         problems and try to come up with solutions to those
                         problems. The competitions we participate in can be
                         found here on our{' '}
-                        <L color="#fd6378">
-                            <Link href="calendar">Calendar</Link>
-                        </L>
+                        <span style={{ color: '#fd6378' }}>
+                            <Link href="calendar">calendar</Link>
+                        </span>
                         .
                     </Text>
                     <Text
@@ -58,10 +57,10 @@ const AboutUs = () => {
                         Finally, the Alcoding Club undertakes various
                         development projects every year, and offers summer
                         internships to work on the same. You can check out our
-                        previous and ongoing projects{' '}
+                        previous and ongoing projects{'  '}
                         <L
                             color="#fd6378"
-                            href="https://github.com/pes-alcoding-club/website"
+                            href="https://github.com/pes-alcoding-club"
                             userSelect="none"
                         >
                             here
@@ -87,7 +86,7 @@ const AboutUs = () => {
                             padding: '0 70px 0 70px',
                             margin: '0 0 60px 0',
                         }}
-                        fontSize="lg"
+                        fontSize="xl"
                     >
                         The Alcoding Club is the official Competitive
                         Programming Club under the CSE Department of PES
@@ -98,9 +97,9 @@ const AboutUs = () => {
                         problems and try to come up with solutions to those
                         problems. The competitions we participate in can be
                         found here on our{' '}
-                        <L color="#fd6378">
-                            <Link href="calendar">Calendar</Link>
-                        </L>
+                        <span style={{ color: '#fd6378' }}>
+                            <Link href="calendar">calendar</Link>
+                        </span>
                         .
                     </Text>
                     <Text
@@ -109,7 +108,7 @@ const AboutUs = () => {
                             padding: '0 70px 0 70px',
                             margin: '0 0 70px 0',
                         }}
-                        fontSize="lg"
+                        fontSize="xl"
                     >
                         The Alcoding Club is also responsible for representing
                         the university in various regional and international
