@@ -14,7 +14,7 @@ const Landing = () => {
             </Head>
             <Header
                 showApplyBtn
-                l1="Calander"
+                l1="Calendar"
                 l2="Editorials"
                 l3="Contact Us"
             />

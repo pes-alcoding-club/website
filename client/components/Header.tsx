@@ -13,7 +13,7 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ showApplyBtn, l1, l2, l3 }) => (
-    <>
+    <div>
         <MediaQuery minDeviceWidth={1224}>
             <Box
                 style={{
@@ -41,7 +41,7 @@ const Header: React.FC<HeaderProps> = ({ showApplyBtn, l1, l2, l3 }) => (
                 >
                     The Alcoding Club
                 </Heading>
-                {showApplyBtn && (
+                {showApplyBtn?
                     <Link href="/register">
                         <Button
                             size="lg"
@@ -58,7 +58,7 @@ const Header: React.FC<HeaderProps> = ({ showApplyBtn, l1, l2, l3 }) => (
                             Apply To Our Monthly Challenge
                         </Button>
                     </Link>
-                )}
+                :1}
                 <Nav l1={l1} l2={l2} l3={l3} />
                 <Divider />
             </Box>
@@ -92,6 +92,7 @@ const Header: React.FC<HeaderProps> = ({ showApplyBtn, l1, l2, l3 }) => (
                 >
                     The Alcoding Club
                 </Heading>
+                {showApplyBtn?
                 <Link href="/register">
                     <Button
                         size="lg"
@@ -106,11 +107,12 @@ const Header: React.FC<HeaderProps> = ({ showApplyBtn, l1, l2, l3 }) => (
                         Apply To Our Monthly Challenge
                     </Button>
                 </Link>
+                :1}
                 <Nav l1={l1} l2={l2} l3={l3} />
                 <Divider />
             </div>
         </MediaQuery>
-    </>
+    </div>
 );
 
 export default Header;
