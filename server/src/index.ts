@@ -9,7 +9,7 @@ dotenv.config();
 
 const app: Application = express();
 const PORT = process.env.PORT || 5000;
-const mongoURL = process.env.DATABASE_ACCESS;
+const mongoURL = process.env.DATABASE_ACCESS || 'mongodb://localhost:27017/alcoding-website';
 console.log(mongoURL);
 
 mongoose.connect(mongoURL, {
