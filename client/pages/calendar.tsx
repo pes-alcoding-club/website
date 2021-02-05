@@ -1,4 +1,4 @@
-import { Divider, Heading, Text } from '@chakra-ui/react';
+import { Box, Divider, Heading, Text } from '@chakra-ui/react';
 import Head from 'next/head';
 import React from 'react';
 import MediaQuery from 'react-responsive';
@@ -59,7 +59,7 @@ const Calendar = () => {
                 <Footer />
             </MediaQuery>
             <MediaQuery maxDeviceWidth={1224}>
-                <div
+                <Box
                     style={{
                         backgroundImage:
                             'url(' +
@@ -85,14 +85,14 @@ const Calendar = () => {
                             padding: '0 110px 0 110px',
                             margin: '15px 0 70px 0',
                         }}
-                        fontSize="lg"
+                        fontSize="xl"
                     >
                         Nulla sit amet sapien vitae mauris tempor ultricies nec
                         finibus sapien. Nunc id nisi in velit vulputate finibus.
                         Aenean bibendum magna sit amet pellentesque rhoncus.
                     </Text>
                     <Nav l1="Editorials" l2="Home" l3="Contact Us" />
-                </div>
+                </Box>
                 <div>
                     <iframe
                         src="https://calendar.google.com/calendar/embed?src=7tldkuuq0qmf9onobqoprgfup4%40group.calendar.google.com&ctz=Asia%2FKolkata"
