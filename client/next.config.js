@@ -1,6 +1,6 @@
 const isProduction = (process.env.NODE_ENV || 'production') === 'production';
-
-const assetPrefix = isProduction ? '/website' : '';
+const isVercel = process.env.VERCEL;
+const assetPrefix = isProduction && !isVercel ? '/website' : '';
 
 module.exports = {
     trailingSlash: true,
