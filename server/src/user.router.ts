@@ -20,7 +20,11 @@ router.post('/', async (req: Request, res: Response) => {
     await user
         .save()
         .then(() => res.status(200).json())
-        .catch((err) => res.json(err));
+        .catch((err) =>
+            res.json({
+                err,
+            })
+        );
 });
 
 export default router;

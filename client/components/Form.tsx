@@ -10,14 +10,29 @@ import {
 } from '@chakra-ui/react';
 import axios from 'axios';
 import React, { useState } from 'react';
+import { useRouter } from 'next/router';
+
+const BASEURL =
+    process.env.NODE_ENV === 'development'
+        ? 'http://localhost:5000/'
+        : 'https://alcoding-website-backend.herokuapp.com/';
 
 const Form = () => {
     const [name, setName] = useState<string>('');
     const [email, setEmail] = useState<string>('');
+    const router = useRouter();
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        await axios.post('http://localhost:5000/user/', { name, email });
+        await axios.post(`${BASEURL}/user`, { name, email }).then((res) => {
+            const { err } = res.data;
+            if (err) {
+                console.log(err);
+                alert('Register failed!');
+            } else {
+                router.push('/');
+            }
+        });
     };
 
     return (
