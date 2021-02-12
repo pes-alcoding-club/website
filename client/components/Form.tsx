@@ -14,8 +14,8 @@ import { useRouter } from 'next/router';
 
 const BASEURL =
     process.env.NODE_ENV === 'development'
-        ? 'http://localhost:5000/'
-        : 'https://alcoding-website-backend.herokuapp.com/';
+        ? 'http://localhost:5000'
+        : 'https://alcoding-website-backend.herokuapp.com';
 
 const Form = () => {
     const [name, setName] = useState<string>('');
