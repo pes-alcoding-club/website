@@ -22,11 +22,11 @@ const Form = () => {
 
     return (
         <>
-            <Container>
+            <Container w="140%" p="5">
                 <Heading textAlign="center" my="10">
                     About the contest
                 </Heading>
-                <Text textAlign="center" fontSize="lg" my="5">
+                <Text fontSize="lg" my="5">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Duis blandit posuere est, eget lacinia est fermentum at.
                     Mauris et ultrices arcu. Aliquam vitae pulvinar ex. Maecenas
@@ -44,22 +44,9 @@ const Form = () => {
                     et placerat nibh. Quisque blandit sed dui eget vehicula.
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Donec sit amet enim pharetra, posuere odio nec, mollis mi.
-                    Phasellus eu volutpat sapien, sit amet viverra nunc. Mauris
-                    augue elit, ullamcorper sed lorem eu, venenatis euismod
-                    arcu. Etiam vehicula ultricies diam, nec porttitor lacus
-                    feugiat non. In vel placerat dui. Pellentesque velit purus,
-                    tristique et blandit at, interdum at erat. Cras iaculis orci
-                    leo, sollicitudin tincidunt tellus ultrices non. Suspendisse
-                    dignissim congue enim, ut porttitor lectus lacinia nec. Nam
-                    quis enim sit amet metus aliquam hendrerit vitae sit amet
-                    velit. Vivamus odio nisl, dictum et sapien id, molestie
-                    elementum quam. Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit. Suspendisse tincidunt sem ut libero dictum,
-                    et posuere urna placerat. Mauris fermentum nulla et sem
-                    blandit, a fermentum neque lacinia.
                 </Text>
             </Container>
-            <Container>
+            <Container w="140%">
                 <Heading textAlign="center" my="10">
                     Apply
                 </Heading>

@@ -1,13 +1,17 @@
-import { Box } from '@chakra-ui/react';
-import Image from 'next/image';
+import { Box, Image } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { FaArrowCircleRight, FaArrowCircleLeft } from 'react-icons/fa';
 import MediaQuery from 'react-responsive';
 // help from: https://www.youtube.com/watch?v=l1MYfu5YWHc :)
 
+const BASEURL =
+    process.env.NODE_ENV === 'development'
+        ? 'http://localhost:5000/'
+        : 'https://alcoding-website-backend.herokuapp.com/';
 const images = ['/img1.jpg', '/img2.jpg', '/img3.jpg', '/img4.jpg'];
 
 const Carousel = () => {
+    console.log(BASEURL);
     const [current, setCurrent] = useState<number>(0);
     const increment = () => setCurrent((current + 1) % images.length);
     const decrement = () => {
@@ -49,7 +53,11 @@ const Carousel = () => {
                             })`}
                         >
                             {key === current && (
-                                <Image width="678px" height="456px" src={src} />
+                                <Image
+                                    width="678px"
+                                    height="456px"
+                                    src={`${BASEURL}img${src}`}
+                                />
                             )}
                         </Box>
                     ))}
@@ -101,7 +109,11 @@ const Carousel = () => {
                             })`}
                         >
                             {key === current && (
-                                <Image width="337px" height="236px" src={src} />
+                                <Image
+                                    width="377px"
+                                    height="276px"
+                                    src={`${BASEURL}img${src}`}
+                                />
                             )}
                         </Box>
                     ))}
