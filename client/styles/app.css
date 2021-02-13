@@ -1,7 +1,9 @@
 html {
-    width: 100%;
+    min-width: 100vw;
+    
+
 }
 
 body {
-    width: 100%;
+    /* width: 100vw; */
 }

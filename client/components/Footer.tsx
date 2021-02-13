@@ -1,169 +1,89 @@
-import { Button, Heading } from '@chakra-ui/react';
+import { Box, Button, Heading, Divider, Text } from '@chakra-ui/react';
 import React from 'react';
-import { FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
-import MediaQuery from 'react-responsive';
 
 const Footer = () => {
     return (
-        <div style={{ bottom: 0 }}>
-            <MediaQuery minDeviceWidth={1224}>
-                <footer
-                    style={{
-                        width: '100%',
-                        padding: '20px',
-                        position: 'relative',
-                        backgroundColor: 'black',
-                    }}
-                >
+        <Box w="100vw" p="10px" backgroundColor="black">
+            <Box display="flex" justifyContent="space-evenly">
+                <Box display="flex" justifyContent="center" flexDir="column">
                     <Heading
                         align="center"
-                        fontSize="xl"
                         color="whitesmoke"
-                        style={{ margin: '10px 0 20px 2px' }}
+                        fontSize={{ lg: '3xl', base: 'xl' }}
                     >
                         Contact Us
                     </Heading>
-                    <div
-                        style={{
-                            display: 'flex',
-                            position: 'relative',
-                            width: '100%',
-                        }}
-                    >
-                        <div style={{ margin: '0px auto', display: 'flex' }}>
-                            <a href="https://www.instagram.com/thealcodingclub/">
-                                <Button
-                                    _hover={{
-                                        bg: '#bc2a8d',
-                                        textColor: 'whitesmoke',
-                                    }}
-                                    leftIcon={<FaInstagram />}
-                                    to="https://www.instagram.com/thealcodingclub"
-                                    style={{ display: 'flex', margin: '10px' }}
-                                >
-                                    Instagram
-                                </Button>
-                            </a>
-                            <a href="https://www.linkedin.com/company/the-alcoding-club/">
-                                <Button
-                                    _hover={{
-                                        bg: '#0e76a8',
-                                        textColor: 'whitesmoke',
-                                    }}
-                                    leftIcon={
-                                        <FaLinkedin
-                                            style={{ margin: '0 3px 0 3px' }}
-                                        />
-                                    }
-                                    style={{ display: 'flex', margin: '10px' }}
-                                >
-                                    LinkedIn
-                                </Button>
-                            </a>
-                            <a href="mailto:alcoding@pes.edu">
-                            <Button
-                                _hover={{
-                                    bg: '#DB4437',
-                                    textColor: 'whitesmoke',
-                                }}
-                                leftIcon={
-                                    <SiGmail
-                                        style={{ margin: '0 5px 0 5px' }}
-                                    />
-                                }
-                                style={{
-                                    display: 'flex',
-                                    margin: '10px',
-                                    padding: '0 27px',
-                                }}
-                            >
-                                Mail
-                            </Button>
-                            </a>
-                        </div>
-                    </div>
-                </footer>
-            </MediaQuery>
-            <MediaQuery maxDeviceWidth={1224}>
-                <footer
-                    style={{
-                        width: '140%',
-                        padding: '20px 20px 90px 20px',
-                        position: 'relative',
-                        backgroundColor: 'black',
-                    }}
-                >
-                    <Heading
-                        align="center"
-                        fontSize="xl"
-                        color="whitesmoke"
-                        style={{ margin: '10px 0 20px 2px' }}
-                    >
-                        Contact Us
-                    </Heading>
-                    <div
-                        style={{
-                            display: 'flex',
-                            position: 'relative',
-                            width: '100%',
-                        }}
-                    >
-                        <div style={{ margin: '0px auto', display: 'flex' }}>
-                            <Button
-                                _hover={{
-                                    bg: '#bc2a8d',
-                                    textColor: 'whitesmoke',
-                                }}
-                                leftIcon={<FaInstagram />}
-                                to="https://www.instagram.com/thealcodingclub"
-                                style={{ display: 'flex', margin: '10px' }}
-                            >
-                                <a href="https://www.instagram.com/thealcodingclub/">
-                                    Instagram
-                                </a>
-                            </Button>
-                            <Button
-                                _hover={{
-                                    bg: '#0e76a8',
-                                    textColor: 'whitesmoke',
-                                }}
-                                leftIcon={
-                                    <FaLinkedin
-                                        style={{ margin: '0 3px 0 3px' }}
-                                    />
-                                }
-                                style={{ display: 'flex', margin: '10px' }}
-                            >
-                                <a href="https://www.linkedin.com/company/the-alcoding-club/">
-                                    LinkedIn
-                                </a>
-                            </Button>
-                            <Button
-                                _hover={{
-                                    bg: '#DB4437',
-                                    textColor: 'whitesmoke',
-                                }}
-                                leftIcon={
-                                    <SiGmail
-                                        style={{ margin: '0 5px 0 5px' }}
-                                    />
-                                }
-                                style={{
-                                    display: 'flex',
-                                    margin: '10px',
-                                    padding: '0 27px',
-                                }}
-                            >
-                                <a href="mailto:alcoding@pes.edu">
-                                Mail
-                                </a>
-                            </Button>
-                        </div>
-                    </div>
-                </footer>
-            </MediaQuery>
-        </div>
+                </Box>
+                <Box display="flex" justifyContent="center" flexDir="column">
+                    <a href="https://www.instagram.com/thealcodingclub/">
+                        <Button
+                            m="2"
+                            w="100%"
+                            fontSize={{ lg: 'xl', base: 'lg' }}
+                            _hover={{
+                                bg: '#bc2a8d',
+                                textColor: 'whitesmoke',
+                            }}
+                            leftIcon={<FaInstagram />}
+                        >
+                            Instagram
+                        </Button>
+                    </a>
+                    <a href="https://www.linkedin.com/company/the-alcoding-club/">
+                        <Button
+                            m="2"
+                            w="100%"
+                            fontSize={{ lg: 'xl', base: 'lg' }}
+                            _hover={{
+                                bg: '#0e76a8',
+                                textColor: 'whitesmoke',
+                            }}
+                            leftIcon={<FaLinkedin />}
+                        >
+                            Linkedin
+                        </Button>
+                    </a>
+                    <a href="https://github.com/pes-alcoding-club">
+                        <Button
+                            m="2"
+                            w="100%"
+                            fontSize={{ lg: 'xl', base: 'lg' }}
+                            _hover={{
+                                bg: '#4A5568',
+                                textColor: 'whitesmoke',
+                            }}
+                            leftIcon={<FaGithub />}
+                        >
+                            Github
+                        </Button>
+                    </a>
+                    <a href="mailto:alcoding@pes.edu">
+                        <Button
+                            m="2"
+                            w="100%"
+                            fontSize={{ lg: 'xl', base: 'lg' }}
+                            _hover={{
+                                bg: '#DB4437',
+                                textColor: 'whitesmoke',
+                            }}
+                            leftIcon={<SiGmail />}
+                        >
+                            Email
+                        </Button>
+                    </a>
+                </Box>
+            </Box>
+            <Box w="80%" mx="auto" my="5">
+                <Divider />
+            </Box>
+            <Box color="whitesmoke" textAlign="center" my="4">
+                <Text fontWeight="bold" fontSize={{ lg: '3xl', base: 'xl' }}>
+                    The Alcoding Club 2021
+                </Text>
+            </Box>
+        </Box>
     );
 };
 export default Footer;
