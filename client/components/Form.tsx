@@ -2,6 +2,7 @@ import {
     Box,
     Button,
     Container,
+    Divider,
     Heading,
     Input,
     InputGroup,
@@ -36,12 +37,12 @@ const Form = () => {
     };
 
     return (
-        <>
-            <Container w="140%" p="5">
+        <Box>
+            <Container>
                 <Heading textAlign="center" my="10">
                     About the contest
                 </Heading>
-                <Text fontSize="lg" my="5">
+                <Text textAlign="center" fontSize="lg" my="5" p="5">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Duis blandit posuere est, eget lacinia est fermentum at.
                     Mauris et ultrices arcu. Aliquam vitae pulvinar ex. Maecenas
@@ -61,7 +62,7 @@ const Form = () => {
                     Donec sit amet enim pharetra, posuere odio nec, mollis mi.
                 </Text>
             </Container>
-            <Container w="140%">
+            <Container>
                 <Heading textAlign="center" my="10">
                     Apply
                 </Heading>
@@ -84,7 +85,7 @@ const Form = () => {
                 <Box display="flex" justifyContent="center" my="10">
                     <Button
                         size="lg"
-                        _hover={{ bg: '#0f3460', textColor: 'whitesmoke' }}
+                        _hover={{ textColor: 'whitesmoke' }}
                         bgColor="#e94560"
                         onClick={onSubmit}
                     >
@@ -92,7 +93,7 @@ const Form = () => {
                     </Button>
                 </Box>
             </Container>
-        </>
+        </Box>
     );
 };
 

@@ -8,7 +8,8 @@ const LinkContainer = ({ children }) => (
         userSelect="none"
         _hover={{ color: '#e94560' }}
         color="whitesmoke"
-        style={{ fontSize: '20px', fontWeight: 'bold' }}
+        fontSize={{ lg: 'xl', base: 'md' }}
+        fontWeight="bold"
     >
         {children}
     </Box>
