@@ -9,7 +9,7 @@ const Register = () => (
         <Head>
             <title>The Alcoding Club</title>
         </Head>
-        <Header l1="Editorials" l2="Home" l3="Contact Us" />
+        <Header />
         <Form />
         <Footer />
     </>
