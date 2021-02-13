@@ -7,12 +7,9 @@ import Nav from './Nav';
 
 interface HeaderProps {
     showApplyBtn?: boolean;
-    l1: string;
-    l2: string;
-    l3: string;
 }
 
-const Header: React.FC<HeaderProps> = ({ showApplyBtn, l1, l2, l3 }) => (
+const Header: React.FC<HeaderProps> = ({ showApplyBtn }) => (
     <div>
         <MediaQuery minDeviceWidth={1224}>
             <Box
@@ -41,7 +38,7 @@ const Header: React.FC<HeaderProps> = ({ showApplyBtn, l1, l2, l3 }) => (
                 >
                     The Alcoding Club
                 </Heading>
-                {showApplyBtn?
+                {showApplyBtn ? (
                     <Link href="/register">
                         <Button
                             size="lg"
@@ -58,8 +55,10 @@ const Header: React.FC<HeaderProps> = ({ showApplyBtn, l1, l2, l3 }) => (
                             Apply To Our Monthly Challenge
                         </Button>
                     </Link>
-                :1}
-                <Nav l1={l1} l2={l2} l3={l3} />
+                ) : (
+                    1
+                )}
+                <Nav />
                 <Divider />
             </Box>
         </MediaQuery>
@@ -92,23 +91,25 @@ const Header: React.FC<HeaderProps> = ({ showApplyBtn, l1, l2, l3 }) => (
                 >
                     The Alcoding Club
                 </Heading>
-                {showApplyBtn?
-                <Link href="/register">
-                    <Button
-                        size="lg"
-                        _hover={{ bg: '#0f3460', textColor: 'whitesmoke' }}
-                        bgColor="#e94560"
-                        style={{
-                            margin: '30px auto 90px',
-                            display: 'block',
-                        }}
-                        href="/about"
-                    >
-                        Apply To Our Monthly Challenge
-                    </Button>
-                </Link>
-                :1}
-                <Nav l1={l1} l2={l2} l3={l3} />
+                {showApplyBtn ? (
+                    <Link href="/register">
+                        <Button
+                            size="lg"
+                            _hover={{ bg: '#0f3460', textColor: 'whitesmoke' }}
+                            bgColor="#e94560"
+                            style={{
+                                margin: '30px auto 90px',
+                                display: 'block',
+                            }}
+                            href="/about"
+                        >
+                            Apply To Our Monthly Challenge
+                        </Button>
+                    </Link>
+                ) : (
+                    1
+                )}
+                <Nav />
                 <Divider />
             </div>
         </MediaQuery>

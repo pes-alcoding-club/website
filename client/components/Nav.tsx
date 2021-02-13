@@ -1,12 +1,7 @@
 import { Box } from '@chakra-ui/react';
-import React, { FC } from 'react';
 import Link from 'next/link';
-
-interface props {
-    l1: String;
-    l2: String;
-    l3: String;
-}
+import { useRouter } from 'next/router';
+import React from 'react';
 
 const LinkContainer = ({ children }) => (
     <Box
@@ -19,20 +14,39 @@ const LinkContainer = ({ children }) => (
     </Box>
 );
 
-const Nav: FC<props> = ({ l1, l2, l3 }) => (
-    <Box display="flex" p="30px" w="100%" justifyContent="space-around">
-        <LinkContainer>
-            <Link href={l1.toLowerCase()}>{l1}</Link>
-        </LinkContainer>
-        <LinkContainer>
-            <Link href={l2 === 'Home' ? '/' : l2.toLowerCase()}>{l2}</Link>
-        </LinkContainer>
-        <LinkContainer>
-            <Link href={l3 == 'Contact Us' ? 'contactus' : l3.toLowerCase()}>
-                {l3}
-            </Link>
-        </LinkContainer>
-    </Box>
-);
+const Nav = () => {
+    const { pathname } = useRouter();
+    if (pathname === '/') {
+        return (
+            <Box display="flex" p="30px" w="100%" justifyContent="space-around">
+                <LinkContainer>
+                    <a href="https://calendar.google.com/calendar?cid=N3RsZGt1dXEwcW1mOW9ub2Jxb3ByZ2Z1cDRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">
+                        Calendar
+                    </a>
+                </LinkContainer>
+                <LinkContainer>
+                    <Link href="/editorial">Editorial</Link>
+                </LinkContainer>
+                <LinkContainer>
+                    <Link href="/contactus">Contact Us</Link>
+                </LinkContainer>
+            </Box>
+        );
+    } else {
+        return (
+            <Box display="flex" p="30px" w="100%" justifyContent="space-around">
+                <LinkContainer>
+                    <Link href="/editorials">Editorials</Link>
+                </LinkContainer>
+                <LinkContainer>
+                    <Link href="/">Home</Link>
+                </LinkContainer>
+                <LinkContainer>
+                    <Link href="/contactus">Contact Us</Link>
+                </LinkContainer>
+            </Box>
+        );
+    }
+};
 
 export default Nav;
