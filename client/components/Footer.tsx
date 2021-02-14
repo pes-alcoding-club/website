@@ -1,4 +1,4 @@
-import { Box, Button, Heading, Divider, Text } from '@chakra-ui/react';
+import { Box, Button, Divider, Image, Text } from '@chakra-ui/react';
 import React from 'react';
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
@@ -6,21 +6,29 @@ import { SiGmail } from 'react-icons/si';
 const Footer = () => (
     <Box w="100vw" p="10px" backgroundColor="black" mt="100">
         <Box display="flex" justifyContent="space-evenly">
-            <Box display="flex" justifyContent="center" flexDir="column">
-                <Heading
-                    align="center"
-                    color="whitesmoke"
-                    fontSize={{ lg: '3xl', base: 'xl' }}
-                >
-                    Contact Us
-                </Heading>
+            <Box
+                display="flex"
+                justifyContent="center"
+                width={{ base: '50%', lg: '25%' }}
+                height="100%"
+            >
+                <Box width={{ lg: '80%', base: '100%' }}>
+                    <Image src="/Logo-w.png" userSelect="none" />
+                </Box>
+            </Box>
+            <Box
+                display={{ lg: 'flex', base: 'none' }}
+                justifyContent="center"
+                flexDir="column"
+            >
+                <Divider orientation="vertical" color="white" height="80%" />
             </Box>
             <Box display="flex" justifyContent="center" flexDir="column">
                 <a href="https://www.instagram.com/thealcodingclub/">
                     <Button
                         m="2"
                         w="100%"
-                        fontSize={{ lg: 'xl', base: 'lg' }}
+                        fontSize={{ lg: 'xl', base: 'md' }}
                         _hover={{
                             bg: '#bc2a8d',
                             textColor: 'whitesmoke',
@@ -34,7 +42,7 @@ const Footer = () => (
                     <Button
                         m="2"
                         w="100%"
-                        fontSize={{ lg: 'xl', base: 'lg' }}
+                        fontSize={{ lg: 'xl', base: 'md' }}
                         _hover={{
                             bg: '#0e76a8',
                             textColor: 'whitesmoke',
@@ -48,7 +56,7 @@ const Footer = () => (
                     <Button
                         m="2"
                         w="100%"
-                        fontSize={{ lg: 'xl', base: 'lg' }}
+                        fontSize={{ lg: 'xl', base: 'md' }}
                         _hover={{
                             bg: '#4A5568',
                             textColor: 'whitesmoke',
@@ -62,7 +70,7 @@ const Footer = () => (
                     <Button
                         m="2"
                         w="100%"
-                        fontSize={{ lg: 'xl', base: 'lg' }}
+                        fontSize={{ lg: 'xl', base: 'md' }}
                         _hover={{
                             bg: '#DB4437',
                             textColor: 'whitesmoke',
@@ -79,7 +87,7 @@ const Footer = () => (
         </Box>
         <Box color="whitesmoke" textAlign="center" my="4">
             <Text fontWeight="bold" fontSize={{ lg: '3xl', base: 'xl' }}>
-                The Alcoding Club 2021
+                The Alcoding Club
             </Text>
         </Box>
     </Box>

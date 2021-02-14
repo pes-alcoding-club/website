@@ -48,8 +48,8 @@ const Carousel = () => {
                     {key === current && (
                         <Image
                             alt="Alcoding Club Contest"
-                            w={{ lg: '678px', base: '377px' }}
-                            h={{ lg: '456px', base: '276px' }}
+                            w={{ lg: '778px', base: '357px' }}
+                            h={{ lg: '556px', base: '236px' }}
                             src={`${BASEURL}img${src}`}
                         />
                     )}

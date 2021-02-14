@@ -9,7 +9,7 @@ interface HeaderProps {
     goToBottom: () => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ showApplyBtn, goToBottom}) => (
+const Header: React.FC<HeaderProps> = ({ showApplyBtn, goToBottom }) => (
     <Box
         w="100vw"
         backgroundImage="url(https://images.unsplash.com/photo-1549880181-56a44cf4a9a5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80)"
@@ -17,14 +17,16 @@ const Header: React.FC<HeaderProps> = ({ showApplyBtn, goToBottom}) => (
         backgroundRepeat="no-repeat"
         backgroundSize="cover"
     >
-        <Logo
-            style={{
-                height: '200px',
-                width: '200px',
-                margin: '0 auto',
-                paddingTop: '10px',
-            }}
-        />
+        <Link href="/">
+            <Logo
+                style={{
+                    height: '200px',
+                    width: '200px',
+                    margin: '0 auto',
+                    paddingTop: '10px',
+                }}
+            />
+        </Link>
         <Heading
             as="h2"
             textAlign="center"
@@ -35,25 +37,23 @@ const Header: React.FC<HeaderProps> = ({ showApplyBtn, goToBottom}) => (
         {showApplyBtn && (
             <Link href="/register">
                 <Button
+                    fontSize={{ lg: 'xl', base: 'md' }}
+                    size="lg"
                     _hover={{
+                        bg: '#0f3460',
                         textColor: 'whitesmoke',
                     }}
                     bgColor="#e94560"
+                    mt="30px"
                     mx="auto"
-                    my="50px"
-                    size="4xl"
-                    p="3"
-                    fontSize={{ base: 'md', lg: '2xl' }}
+                    mb="90px"
                     display="block"
-                    fontWeight="bold"
                 >
                     Apply to our Monthly Challenge
                 </Button>
             </Link>
         )}
-        <Nav 
-            goToBottom={goToBottom}
-        />
+        <Nav goToBottom={goToBottom} />
     </Box>
 );
 

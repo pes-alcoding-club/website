@@ -7,6 +7,7 @@ import {
     InputGroup,
     InputLeftAddon,
     Text,
+    useToast,
 } from '@chakra-ui/react';
 import axios from 'axios';
 import { useRouter } from 'next/router';
@@ -18,6 +19,7 @@ const BASEURL =
         : 'https://alcoding-website-backend.herokuapp.com';
 
 const Form = () => {
+    const toast = useToast();
     const [name, setName] = useState<string>('');
     const [email, setEmail] = useState<string>('');
     const router = useRouter();
@@ -27,9 +29,23 @@ const Form = () => {
         await axios.post(`${BASEURL}/user`, { name, email }).then((res) => {
             const { err } = res.data;
             if (err) {
-                console.log(err);
-                alert('Register failed!');
+                toast({
+                    title: 'Register failed',
+                    description:
+                        'There was some problem while processing your request.',
+                    status: 'error',
+                    duration: 9000,
+                    isClosable: true,
+                });
             } else {
+                toast({
+                    title: 'Register sucessfull!',
+                    description:
+                        'We registered your account for the latest contest.',
+                    status: 'success',
+                    duration: 9000,
+                    isClosable: true,
+                });
                 router.push('/');
             }
         });
