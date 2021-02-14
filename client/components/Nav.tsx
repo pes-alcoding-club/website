@@ -1,7 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import React from 'react';
+import React, { FC } from 'react';
 
 const LinkContainer = ({ children }) => (
     <Box
@@ -15,7 +15,11 @@ const LinkContainer = ({ children }) => (
     </Box>
 );
 
-const Nav = () => {
+interface NavProps {
+    goToBottom: () => void;
+}
+
+const Nav: FC<NavProps> = ({ goToBottom }) => {
     const { pathname } = useRouter();
     if (pathname === '/') {
         return (
@@ -26,10 +30,17 @@ const Nav = () => {
                     </a>
                 </LinkContainer>
                 <LinkContainer>
-                    <Link href="/editorial">Editorial</Link>
+                    <a href="https://pes-alcoding-club.github.io/editorials/">
+                        Editorials
+                    </a>
                 </LinkContainer>
                 <LinkContainer>
-                    <Link href="/contactus">Contact Us</Link>
+                    <a
+                        onClick={() => goToBottom()}
+                        style={{ cursor: 'pointer' }}
+                    >
+                        Contact Us
+                    </a>
                 </LinkContainer>
             </Box>
         );
@@ -37,13 +48,20 @@ const Nav = () => {
         return (
             <Box display="flex" p="30px" w="100%" justifyContent="space-around">
                 <LinkContainer>
-                    <Link href="/editorials">Editorials</Link>
+                    <a href="https://pes-alcoding-club.github.io/editorials/">
+                        Editorials
+                    </a>
                 </LinkContainer>
                 <LinkContainer>
                     <Link href="/">Home</Link>
                 </LinkContainer>
                 <LinkContainer>
-                    <Link href="/contactus">Contact Us</Link>
+                    <a
+                        onClick={() => goToBottom()}
+                        style={{ cursor: 'pointer' }}
+                    >
+                        Contact Us
+                    </a>
                 </LinkContainer>
             </Box>
         );
