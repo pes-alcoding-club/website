@@ -1,19 +1,27 @@
-import { Box, Button, Heading, Divider, Text,Image } from '@chakra-ui/react';
+import { Box, Button, Divider, Image, Text } from '@chakra-ui/react';
 import React from 'react';
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
-import Logo from '../assets/LOGO_w.svg';
 
 const Footer = () => (
     <Box w="100vw" p="10px" backgroundColor="black" mt="100">
         <Box display="flex" justifyContent="space-evenly">
-            <Box display="flex" justifyContent="center" width={{base:"50%",lg:"25%"}} height="100%">
-                <Box width={{lg:"80%",base:"100%"}}>
-                <Image src="/Logo-w.png"/>
+            <Box
+                display="flex"
+                justifyContent="center"
+                width={{ base: '50%', lg: '25%' }}
+                height="100%"
+            >
+                <Box width={{ lg: '80%', base: '100%' }}>
+                    <Image src="/Logo-w.png" userSelect="none" />
                 </Box>
             </Box>
-            <Box display={{lg:"flex",base:"none"}} justifyContent="center" flexDir="column">
-            <Divider orientation="vertical" color="white" height="80%"/>
+            <Box
+                display={{ lg: 'flex', base: 'none' }}
+                justifyContent="center"
+                flexDir="column"
+            >
+                <Divider orientation="vertical" color="white" height="80%" />
             </Box>
             <Box display="flex" justifyContent="center" flexDir="column">
                 <a href="https://www.instagram.com/thealcodingclub/">
