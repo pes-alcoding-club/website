@@ -1,79 +1,88 @@
-import { Box, Button, Heading, Divider, Text } from '@chakra-ui/react';
+import { Box, Button, Heading, Divider, Text,Image } from '@chakra-ui/react';
 import React from 'react';
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
+import Logo from '../assets/LOGO_w.svg';
 
-const Footer = () => {
-    return (
-        <Box w="100vw" p="10px" backgroundColor="black">
-            <Box display="flex" justifyContent="space-evenly">
-                <Box display="flex" justifyContent="center" flexDir="row">
-                    <Heading
-                        align="center"
-                        color="whitesmoke"
-                        fontSize={{ lg: '3xl', base: 'xl' }}
-                        margin="80px 20px"
-                    >
-                        Contact Us
-                    </Heading>
-                    <Divider orientation="vertical" height="60%" margin="40px 10px 40px 40px"/>
-                <Box display="flex" justifyContent="center" flexDir="row" margin="80px 40px">
-                    <a href="https://www.instagram.com/thealcodingclub/" style={{margin:"0 20px"}}>
-                        <Button
-                            w="100%"
-                            fontSize={{ lg: 'lg', base: 'md' }}
-                            _hover={{
-                                bg: '#bc2a8d',
-                                textColor: 'whitesmoke',
-                            }}
-                            leftIcon={<FaInstagram />}
-                        >
-                            Instagram
-                        </Button>
-                    </a>
-                    <a href="https://www.linkedin.com/company/the-alcoding-club/" style={{margin:"0 20px"}}>
-                        <Button
-                            w="100%"
-                            fontSize={{ lg: 'lg', base: 'md' }}
-                            _hover={{
-                                bg: '#0e76a8',
-                                textColor: 'whitesmoke',
-                            }}
-                            leftIcon={<FaLinkedin/>}
-                        >
-                            Linkedin
-                        </Button>
-                    </a>
-                    <a href="https://github.com/pes-alcoding-club" style={{margin:"0 20px"}}>
-                        <Button
-                            w="100%"
-                            fontSize={{ lg: 'lg', base: 'md' }}
-                            _hover={{
-                                bg: '#4A5568',
-                                textColor: 'whitesmoke',
-                            }}
-                            leftIcon={<FaGithub />}
-                        >
-                            Github
-                        </Button>
-                    </a>
-                    <a href="mailto:alcoding@pes.edu" style={{margin:"0 20px"}}>
-                        <Button
-                            w="100%"
-                            fontSize={{ lg: 'lg', base: 'md' }}
-                            _hover={{
-                                bg: '#DB4437',
-                                textColor: 'whitesmoke',
-                            }}
-                            leftIcon={<SiGmail />}
-                        >
-                            Email
-                        </Button>
-                    </a>
-                </Box>
+const Footer = () => (
+    <Box w="100vw" p="10px" backgroundColor="black" mt="100">
+        <Box display="flex" justifyContent="space-evenly">
+            <Box display="flex" justifyContent="center" width={{base:"50%",lg:"25%"}} height="100%">
+                <Box width={{lg:"80%",base:"100%"}}>
+                <Image src="/Logo-w.png"/>
                 </Box>
             </Box>
+            <Box display={{lg:"flex",base:"none"}} justifyContent="center" flexDir="column">
+            <Divider orientation="vertical" color="white" height="80%"/>
+            </Box>
+            <Box display="flex" justifyContent="center" flexDir="column">
+                <a href="https://www.instagram.com/thealcodingclub/">
+                    <Button
+                        m="2"
+                        w="100%"
+                        fontSize={{ lg: 'xl', base: 'md' }}
+                        _hover={{
+                            bg: '#bc2a8d',
+                            textColor: 'whitesmoke',
+                        }}
+                        leftIcon={<FaInstagram />}
+                    >
+                        Instagram
+                    </Button>
+                </a>
+                <a href="https://www.linkedin.com/company/the-alcoding-club/">
+                    <Button
+                        m="2"
+                        w="100%"
+                        fontSize={{ lg: 'xl', base: 'md' }}
+                        _hover={{
+                            bg: '#0e76a8',
+                            textColor: 'whitesmoke',
+                        }}
+                        leftIcon={<FaLinkedin />}
+                    >
+                        Linkedin
+                    </Button>
+                </a>
+                <a href="https://github.com/pes-alcoding-club">
+                    <Button
+                        m="2"
+                        w="100%"
+                        fontSize={{ lg: 'xl', base: 'md' }}
+                        _hover={{
+                            bg: '#4A5568',
+                            textColor: 'whitesmoke',
+                        }}
+                        leftIcon={<FaGithub />}
+                    >
+                        Github
+                    </Button>
+                </a>
+                <a href="mailto:alcoding@pes.edu">
+                    <Button
+                        m="2"
+                        w="100%"
+                        fontSize={{ lg: 'xl', base: 'md' }}
+                        _hover={{
+                            bg: '#DB4437',
+                            textColor: 'whitesmoke',
+                        }}
+                        leftIcon={<SiGmail />}
+                    >
+                        Email
+                    </Button>
+                </a>
+            </Box>
         </Box>
-    );
-};
+        <Box w="80%" mx="auto" my="5">
+            <Divider />
+        </Box>
+        <Box color="whitesmoke" textAlign="center" my="4">
+            <Text fontWeight="bold" fontSize={{ lg: '3xl', base: 'xl' }}>
+                The Alcoding Club
+            </Text>
+        </Box>
+    </Box>
+);
+
 export default Footer;
