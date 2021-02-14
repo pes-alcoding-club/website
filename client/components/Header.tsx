@@ -24,7 +24,11 @@ const Header: React.FC<HeaderProps> = ({ showApplyBtn }) => (
                 paddingTop: '10px',
             }}
         />
-        <Heading as="h2" textAlign="center" fontSize={{ base: '4xl', lg: '6xl' }}>
+        <Heading
+            as="h2"
+            textAlign="center"
+            fontSize={{ base: '4xl', lg: '6xl' }}
+        >
             The Alcoding Club
         </Heading>
         {showApplyBtn && (

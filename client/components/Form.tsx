@@ -2,7 +2,6 @@ import {
     Box,
     Button,
     Container,
-    Divider,
     Heading,
     Input,
     InputGroup,
@@ -10,8 +9,8 @@ import {
     Text,
 } from '@chakra-ui/react';
 import axios from 'axios';
-import React, { useState } from 'react';
 import { useRouter } from 'next/router';
+import React, { useState } from 'react';
 
 const BASEURL =
     process.env.NODE_ENV === 'development'
