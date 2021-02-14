@@ -18,7 +18,7 @@ const Floating = () => {
                         position="fixed"
                         bottom="30px"
                         right="30px"
-                        fontWeight="bold"
+                        fontSize="lg"
                     >
                         Apply Now
                     </Button>

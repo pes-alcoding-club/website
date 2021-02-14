@@ -30,17 +30,17 @@ const Header: React.FC<HeaderProps> = ({ showApplyBtn }) => (
         {showApplyBtn && (
             <Link href="/register">
                 <Button
+                    fontSize="xl"
+                    size="lg"
                     _hover={{
+                        bg: '#0f3460',
                         textColor: 'whitesmoke',
                     }}
                     bgColor="#e94560"
-                    mx="auto"
-                    my="50px"
-                    size="4xl"
-                    p="3"
-                    fontSize={{ base: 'md', lg: '2xl' }}
-                    display="block"
-                    fontWeight="bold"
+                    style={{
+                        margin: '30px auto 90px',
+                        display: 'block',
+                    }}
                 >
                     Apply to our Monthly Challenge
                 </Button>

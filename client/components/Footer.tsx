@@ -7,21 +7,21 @@ const Footer = () => {
     return (
         <Box w="100vw" p="10px" backgroundColor="black">
             <Box display="flex" justifyContent="space-evenly">
-                <Box display="flex" justifyContent="center" flexDir="column">
+                <Box display="flex" justifyContent="center" flexDir="row">
                     <Heading
                         align="center"
                         color="whitesmoke"
                         fontSize={{ lg: '3xl', base: 'xl' }}
+                        margin="80px 20px"
                     >
                         Contact Us
                     </Heading>
-                </Box>
-                <Box display="flex" justifyContent="center" flexDir="column">
-                    <a href="https://www.instagram.com/thealcodingclub/">
+                    <Divider orientation="vertical" height="60%" margin="40px 10px 40px 40px"/>
+                <Box display="flex" justifyContent="center" flexDir="row" margin="80px 40px">
+                    <a href="https://www.instagram.com/thealcodingclub/" style={{margin:"0 20px"}}>
                         <Button
-                            m="2"
                             w="100%"
-                            fontSize={{ lg: 'xl', base: 'lg' }}
+                            fontSize={{ lg: 'lg', base: 'md' }}
                             _hover={{
                                 bg: '#bc2a8d',
                                 textColor: 'whitesmoke',
@@ -31,25 +31,23 @@ const Footer = () => {
                             Instagram
                         </Button>
                     </a>
-                    <a href="https://www.linkedin.com/company/the-alcoding-club/">
+                    <a href="https://www.linkedin.com/company/the-alcoding-club/" style={{margin:"0 20px"}}>
                         <Button
-                            m="2"
                             w="100%"
-                            fontSize={{ lg: 'xl', base: 'lg' }}
+                            fontSize={{ lg: 'lg', base: 'md' }}
                             _hover={{
                                 bg: '#0e76a8',
                                 textColor: 'whitesmoke',
                             }}
-                            leftIcon={<FaLinkedin />}
+                            leftIcon={<FaLinkedin/>}
                         >
                             Linkedin
                         </Button>
                     </a>
-                    <a href="https://github.com/pes-alcoding-club">
+                    <a href="https://github.com/pes-alcoding-club" style={{margin:"0 20px"}}>
                         <Button
-                            m="2"
                             w="100%"
-                            fontSize={{ lg: 'xl', base: 'lg' }}
+                            fontSize={{ lg: 'lg', base: 'md' }}
                             _hover={{
                                 bg: '#4A5568',
                                 textColor: 'whitesmoke',
@@ -59,11 +57,10 @@ const Footer = () => {
                             Github
                         </Button>
                     </a>
-                    <a href="mailto:alcoding@pes.edu">
+                    <a href="mailto:alcoding@pes.edu" style={{margin:"0 20px"}}>
                         <Button
-                            m="2"
                             w="100%"
-                            fontSize={{ lg: 'xl', base: 'lg' }}
+                            fontSize={{ lg: 'lg', base: 'md' }}
                             _hover={{
                                 bg: '#DB4437',
                                 textColor: 'whitesmoke',
@@ -74,14 +71,7 @@ const Footer = () => {
                         </Button>
                     </a>
                 </Box>
-            </Box>
-            <Box w="80%" mx="auto" my="5">
-                <Divider />
-            </Box>
-            <Box color="whitesmoke" textAlign="center" my="4">
-                <Text fontWeight="bold" fontSize={{ lg: '3xl', base: 'xl' }}>
-                    The Alcoding Club 2021
-                </Text>
+                </Box>
             </Box>
         </Box>
     );
