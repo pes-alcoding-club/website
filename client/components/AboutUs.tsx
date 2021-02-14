@@ -1,54 +1,53 @@
 import { Box, Container, Heading, Link, Text } from '@chakra-ui/react';
 import React from 'react';
 
-const AboutUs = () => {
-    return (
-        <Box w="100vw" p="5">
-            <Heading textAlign="center" my="35px" mx="auto">
-                About Us
-            </Heading>
-            <Container mb={{ lg: '60px', base: '10px' }}>
-                <Text textAlign="center" fontSize="lg">
-                    The Alcoding Club is the official Competitive Programming
-                    Club under the CSE Department of PES University. The club
-                    aims to cultivate and promote the skills of competitive
-                    programming and problem solving in the campus through our
-                    workshops and discussions sessions, where we discuss
-                    previous online competition problems and try to come up with
-                    solutions to those problems. The competitions we participate
-                    in can be found here on our{' '}
-                    <span style={{ color: '#fd6378' }}>
-                        <Link href="https://calendar.google.com/calendar?cid=N3RsZGt1dXEwcW1mOW9ub2Jxb3ByZ2Z1cDRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">
-                            Calendar
-                        </Link>
-                    </span>
-                    .
-                </Text>
-            </Container>
-            <Container mb={{ lg: '60px', base: '10px' }}>
-                <Text textAlign="center" fontSize="lg">
-                    The Alcoding Club is also responsible for representing the
-                    university in various regional and international coding
-                    competitions, from college fests, to major events like the
-                    ACM ICPC, Google Kickstart and more. The Club also hosts
-                    various competitions throughout the year. While most of the
-                    competitions we host are online, we also host an annual
-                    flagship coding competition where students from colleges all
-                    over the country compete. Finally, the Alcoding Club
-                    undertakes various development projects every year, and
-                    offers summer internships to work on the same. You can check
-                    out our previous and ongoing projects{'  '}
-                    <Link
-                        color="#fd6378"
-                        href="https://github.com/pes-alcoding-club"
-                        userSelect="none"
-                    >
-                        here
+const AboutUs = () => (
+    <Box w="100vw" p="5">
+        <Heading textAlign="center" my="35px" mx="auto">
+            About Us
+        </Heading>
+        <Container mb={{ lg: '60px', base: '10px' }}>
+            <Text textAlign="center" fontSize="lg">
+                The Alcoding Club is the official Competitive Programming Club
+                under the CSE Department of PES University. The club aims to
+                cultivate and promote the skills of competitive programming and
+                problem solving in the campus through our workshops and
+                discussions sessions, where we discuss previous online
+                competition problems and try to come up with solutions to those
+                problems. The competitions we participate in can be found here
+                on our{' '}
+                <span style={{ color: '#fd6378' }}>
+                    <Link href="https://calendar.google.com/calendar?cid=N3RsZGt1dXEwcW1mOW9ub2Jxb3ByZ2Z1cDRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">
+                        Calendar
                     </Link>
-                    .
-                </Text>
-            </Container>
-        </Box>
-    );
-};
+                </span>
+                .
+            </Text>
+        </Container>
+        <Container mb={{ lg: '60px', base: '10px' }}>
+            <Text textAlign="center" fontSize="lg">
+                The Alcoding Club is also responsible for representing the
+                university in various regional and international coding
+                competitions, from college fests, to major events like the ACM
+                ICPC, Google Kickstart and more. The Club also hosts various
+                competitions throughout the year. While most of the competitions
+                we host are online, we also host an annual flagship coding
+                competition where students from colleges all over the country
+                compete. Finally, the Alcoding Club undertakes various
+                development projects every year, and offers summer internships
+                to work on the same. You can check out our previous and ongoing
+                projects{'  '}
+                <Link
+                    color="#fd6378"
+                    href="https://github.com/pes-alcoding-club"
+                    userSelect="none"
+                >
+                    here
+                </Link>
+                .
+            </Text>
+        </Container>
+    </Box>
+);
+
 export default AboutUs;
