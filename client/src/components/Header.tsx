@@ -1,7 +1,7 @@
 import { Box, Button, Heading } from '@chakra-ui/react';
 import Link from 'next/link';
 import React from 'react';
-import Logo from '../assets/Logo.svg';
+import Logo from '../../assets/Logo.svg';
 import Nav from './Nav';
 
 interface HeaderProps {
