@@ -37,11 +37,10 @@ const ContestCard: React.FC<ContestCardProps> = ({
         </Heading>
         <Badge
             variant="solid"
-            backgroundColor='#008080'
+            colorScheme="green"
             fontSize={{ lg: 'sm', base: 'sm' }}
             my="2"
-            p={{ lg: '0.5', base: '0.5' }}
-            borderRadius="full"
+            p="0.5"
             fontWeight="bold"
         >
             {status}

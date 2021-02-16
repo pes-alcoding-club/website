@@ -120,12 +120,12 @@ const Carousel: FC<CarouselProps> = ({ isImg, data }) => {
                 </Box>
                 <Stack
                     direction="row"
-                    spacing={4}
+                    spacing={20}
                     align="center"
                     mx="auto"
-                    mt={{ lg: '10', base: '5' }}
+                    mt={{ lg: '10', base: '8' }}
                 >
-                    <Button onClick={decrement} mr={{lg:"7",base:"7"}}>
+                    <Button onClick={decrement}>
                         <FaArrowCircleLeft cursor="pointer" size="30" />
                     </Button>
                     <Button onClick={increment}>
