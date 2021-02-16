@@ -14,7 +14,7 @@ export const contestData = [
         solutionURL: 'www.google.com',
     },
     {
-        name: 'September Contest',
+        name: 'February Contest',
         status: 'Finished',
         theme: 'Space',
         problemsURL: 'www.google.com',

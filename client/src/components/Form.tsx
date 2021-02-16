@@ -90,7 +90,7 @@ const Form = () => {
                     Donec sit amet enim pharetra, posuere odio nec, mollis mi.
                 </Text>
             </Container>
-            <Container>
+            <Container id="form">
                 <Heading textAlign="center" my="10">
                     Apply
                 </Heading>

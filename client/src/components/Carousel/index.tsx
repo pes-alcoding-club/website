@@ -81,7 +81,7 @@ const Carousel: FC<CarouselProps> = ({ isImg, data }) => {
                 justifyContent="center"
                 position="relative"
             >
-                <Box mx="auto">
+                <Box mx="auto" mb="5px">
                     {data.map(
                         (
                             {
@@ -125,7 +125,7 @@ const Carousel: FC<CarouselProps> = ({ isImg, data }) => {
                     mx="auto"
                     mt={{ lg: '10', base: '5' }}
                 >
-                    <Button onClick={decrement}>
+                    <Button onClick={decrement} mr={{lg:"7",base:"7"}}>
                         <FaArrowCircleLeft cursor="pointer" size="30" />
                     </Button>
                     <Button onClick={increment}>
