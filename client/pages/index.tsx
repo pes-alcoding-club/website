@@ -1,11 +1,12 @@
 import { Box } from '@chakra-ui/react';
 import Head from 'next/head';
 import React, { useRef } from 'react';
-import AboutUs from '../components/AboutUs';
-import Carousel from '../components/Carousel';
-import Floating from '../components/Floating';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
+import AboutUs from '../src/components/AboutUs';
+import Carousel from '../src/components/Carousel';
+import Floating from '../src/components/Floating';
+import Footer from '../src/components/Footer';
+import Header from '../src/components/Header';
+import { images } from '../src/config';
 
 const Landing = () => {
     const containerRef = useRef();
@@ -17,7 +18,7 @@ const Landing = () => {
             inline: 'nearest',
         });
     };
-    
+
     return (
         <>
             <Head>
@@ -26,7 +27,7 @@ const Landing = () => {
             <Box ref={containerRef}>
                 <Header showApplyBtn goToBottom={goToBottom} />
                 <AboutUs />
-                <Carousel />
+                <Carousel isImg data={images} />
                 <Footer />
                 <Floating />
             </Box>
