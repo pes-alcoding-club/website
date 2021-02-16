@@ -6,8 +6,8 @@ const AboutUs = () => (
         <Heading textAlign="center" my="35px" mx="auto">
             About Us
         </Heading>
-        <Container mb={{ lg: '60px', base: '10px' }}>
-            <Text textAlign="center" fontSize="lg">
+        <Box mb={{ lg: '65px', base: '20px' }}  padding={{lg:"0 65px",base:"0"}}>
+            <Text textAlign="center" fontSize="lg" >
                 The Alcoding Club is the official Competitive Programming Club
                 under the CSE Department of PES University. The club aims to
                 cultivate and promote the skills of competitive programming and
@@ -23,14 +23,19 @@ const AboutUs = () => (
                 </span>
                 .
             </Text>
-        </Container>
-        <Container mb={{ lg: '60px', base: '10px' }}>
+        </Box>
+        <Box mb={{ lg: '40px', base: '10px' }}  padding={{lg:"0 80px",base:"0"}}>
             <Text textAlign="center" fontSize="lg">
                 The Alcoding Club is also responsible for representing the
                 university in various regional and international coding
                 competitions, from college fests, to major events like the ACM
                 ICPC, Google Kickstart and more. The Club also hosts various
-                competitions throughout the year. While most of the competitions
+                competitions throughout the year. 
+            </Text>
+            </Box>
+            <Box mb={{ lg: '60px', base: '10px' }}  padding={{lg:"0 80px",base:"0"}}>
+                <Text textAlign="center" fontSize="lg">   
+                While most of the competitions
                 we host are online, we also host an annual flagship coding
                 competition where students from colleges all over the country
                 compete. Finally, the Alcoding Club undertakes various
@@ -46,7 +51,7 @@ const AboutUs = () => (
                 </Link>
                 .
             </Text>
-        </Container>
+        </Box>
     </Box>
 );
 

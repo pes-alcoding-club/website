@@ -1,7 +1,7 @@
 import { Box, Button, Heading } from '@chakra-ui/react';
 import Link from 'next/link';
 import React from 'react';
-import Logo from '../assets/Logo.svg';
+import Logo from '../../assets/Logo.svg';
 import Nav from './Nav';
 
 interface HeaderProps {
@@ -17,22 +17,22 @@ const Header: React.FC<HeaderProps> = ({ showApplyBtn, goToBottom }) => (
         backgroundRepeat="no-repeat"
         backgroundSize="cover"
     >
-        <Link href="/">
-            <Logo
-                style={{
-                    height: '200px',
-                    width: '200px',
-                    margin: '0 auto',
-                    paddingTop: '10px',
-                }}
-            />
-        </Link>
+        <a href="/">
+                <Logo
+                    style={{
+                        height: '200px',
+                        width: '200px',
+                        margin: '0 auto',
+                        paddingTop: '10px',
+                    }}
+                />
+        </a>
         <Heading
             as="h2"
             textAlign="center"
             fontSize={{ base: '4xl', lg: '6xl' }}
         >
-            The Alcoding Club
+            <Link href="/">The Alcoding Club</Link>
         </Heading>
         {showApplyBtn && (
             <Link href="/register">

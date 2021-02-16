@@ -2,6 +2,7 @@ import {
     Box,
     Button,
     Container,
+    FormControl,
     Heading,
     Input,
     InputGroup,
@@ -28,7 +29,8 @@ const Form = () => {
         e.preventDefault();
         await axios.post(`${BASEURL}/user`, { name, email }).then((res) => {
             const { err } = res.data;
-            if (err) {
+
+            if(err) {
                 toast({
                     title: 'Register failed',
                     description:
@@ -37,7 +39,18 @@ const Form = () => {
                     duration: 9000,
                     isClosable: true,
                 });
-            } else {
+            } 
+            else if(email.replace(/\s/g, '').length==0 || name.replace(/\s/g, '').length==0){
+                toast({
+                    title: 'Register failed',
+                    description:
+                        'Fill out all entry fields to register.',
+                    status: 'error',
+                    duration: 9000,
+                    isClosable: true,
+                });
+            }
+            else {
                 toast({
                     title: 'Register sucessfull!',
                     description:
@@ -77,7 +90,7 @@ const Form = () => {
                     Donec sit amet enim pharetra, posuere odio nec, mollis mi.
                 </Text>
             </Container>
-            <Container>
+            <Container id="form">
                 <Heading textAlign="center" my="10">
                     Apply
                 </Heading>
@@ -87,6 +100,7 @@ const Form = () => {
                         borderColor="#CBD5E0"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
+                        isRequired
                     />
                 </InputGroup>
                 <InputGroup size="lg" my="5">
@@ -95,6 +109,7 @@ const Form = () => {
                         borderColor="#CBD5E0"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
+                        isRequired
                     />
                 </InputGroup>
                 <Box display="flex" justifyContent="center" my="10">

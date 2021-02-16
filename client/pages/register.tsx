@@ -1,9 +1,10 @@
-import React, { useRef } from 'react';
-import Form from '../components/Form';
-import Head from 'next/head';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
 import { Box } from '@chakra-ui/react';
+import Head from 'next/head';
+import React, { useRef } from 'react';
+import Footer from '../src/components/Footer';
+import Form from '../src/components/Form';
+import Header from '../src/components/Header';
+import PreviousContests from '../src/components/PreviousContests';
 
 const Register = () => {
     const containerRef = useRef();
@@ -23,6 +24,7 @@ const Register = () => {
             </Head>
             <Box ref={containerRef}>
                 <Header goToBottom={goToBottom} />
+                <PreviousContests />
                 <Form />
                 <Footer />
             </Box>
