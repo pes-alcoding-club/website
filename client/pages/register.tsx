@@ -22,7 +22,7 @@ const Register = () => {
             <Head>
                 <title>The Alcoding Club</title>
             </Head>
-            <Box ref={containerRef}>
+            <Box w="100vw" ref={containerRef}>
                 <Header goToBottom={goToBottom} />
                 <PreviousContests />
                 <Form />

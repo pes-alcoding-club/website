@@ -30,7 +30,7 @@ const Form = () => {
         await axios.post(`${BASEURL}/user`, { name, email }).then((res) => {
             const { err } = res.data;
 
-            if(err) {
+            if (err) {
                 toast({
                     title: 'Register failed',
                     description:
@@ -39,18 +39,18 @@ const Form = () => {
                     duration: 9000,
                     isClosable: true,
                 });
-            } 
-            else if(email.replace(/\s/g, '').length==0 || name.replace(/\s/g, '').length==0){
+            } else if (
+                email.replace(/\s/g, '').length == 0 ||
+                name.replace(/\s/g, '').length == 0
+            ) {
                 toast({
                     title: 'Register failed',
-                    description:
-                        'Fill out all entry fields to register.',
+                    description: 'Fill out all entry fields to register.',
                     status: 'error',
                     duration: 9000,
                     isClosable: true,
                 });
-            }
-            else {
+            } else {
                 toast({
                     title: 'Register sucessfull!',
                     description:
@@ -66,10 +66,10 @@ const Form = () => {
 
     return (
         <Box>
-            <Container>
-                <Heading textAlign="center" my="10">
-                    About the contest
-                </Heading>
+            <Heading textAlign="center" my="10">
+                About the contest
+            </Heading>
+            <Box w={{ lg: '50%', base: '95%' }} mx="auto">
                 <Text textAlign="center" fontSize="lg" my="5" p="5">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Duis blandit posuere est, eget lacinia est fermentum at.
@@ -89,7 +89,7 @@ const Form = () => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Donec sit amet enim pharetra, posuere odio nec, mollis mi.
                 </Text>
-            </Container>
+            </Box>
             <Container id="form">
                 <Heading textAlign="center" my="10">
                     Apply
