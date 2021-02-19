@@ -40,7 +40,7 @@ const Header: React.FC<HeaderProps> = ({ showApplyBtn, goToBottom }) => (
                     fontSize={{ lg: 'xl', base: 'md' }}
                     size="lg"
                     _hover={{
-                        bg: '#0f3460',
+                        bg: "#b0152f",
                         textColor: 'whitesmoke',
                     }}
                     bgColor="#e94560"
@@ -48,6 +48,7 @@ const Header: React.FC<HeaderProps> = ({ showApplyBtn, goToBottom }) => (
                     mx="auto"
                     mb="90px"
                     display="block"
+                    textColor="whitesmoke"
                 >
                     Apply to our Monthly Challenge
                 </Button>

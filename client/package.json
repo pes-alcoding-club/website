@@ -8,6 +8,8 @@
         "@chakra-ui/react": "^1.1.2",
         "@emotion/react": "^11.1.4",
         "@emotion/styled": "^11.0.0",
+        "@fullcalendar/core": "^5.5.1",
+        "@fullcalendar/daygrid": "^5.5.0",
         "@svgr/webpack": "^5.5.0",
         "axios": "^0.21.1",
         "framer-motion": "^3.3.0",
