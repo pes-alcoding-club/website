@@ -55,7 +55,7 @@ const Form = () => {
                             description:
                                 'This email address has already registered for the contest.',
                             status: 'error',
-                            duration: 9000,
+                            duration: 5000,
                             isClosable: true,
                         });
                     } else {
@@ -64,7 +64,7 @@ const Form = () => {
                             description:
                                 'There was some problem while processing your request.\nPlease try again later.',
                             status: 'error',
-                            duration: 9000,
+                            duration: 5000,
                             isClosable: true,
                         });
                     }
@@ -74,7 +74,7 @@ const Form = () => {
                         description:
                             'We registered your account for the latest contest.',
                         status: 'success',
-                        duration: 9000,
+                        duration: 5000,
                         isClosable: true,
                     });
                     router.push('/');
@@ -87,7 +87,7 @@ const Form = () => {
                     description:
                         'There was some problem while processing your request. Please try again later.',
                     status: 'error',
-                    duration: 9000,
+                    duration: 5000,
                     isClosable: true,
                 });
             });
