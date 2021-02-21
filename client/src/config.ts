@@ -5,26 +5,55 @@ export const BASEURL =
         ? 'http://localhost:5000/'
         : 'https://alcoding-website-backend.herokuapp.com/';
 
-export const contestData = [
+export interface IContest {
+    name: string;
+    tags: { tag: string; color: string }[];
+    problemsURL: string;
+    solutionURL: string;
+    date: string;
+}
+
+export const contests: IContest[] = [
     {
-        name: 'September Contest',
-        status: 'Finished',
-        theme: 'Space',
-        problemsURL: 'www.google.com',
+        name: 'Jan Contest',
+        tags: [{ color: 'purple', tag: 'space' }],
+        problemsURL: 'http://www.google.com',
         solutionURL: 'www.google.com',
+        date: '29-02-20',
     },
     {
-        name: 'February Contest',
-        status: 'Finished',
-        theme: 'Space',
+        name: 'Feb Contest',
+        tags: [{ color: 'green', tag: 'easy' }],
         problemsURL: 'www.google.com',
         solutionURL: 'www.google.com',
+        date: '29-02-20',
     },
     {
-        name: 'September Contest',
-        status: 'Finished',
-        theme: 'Space',
+        name: 'Sept Contest',
+        tags: [{ color: 'red', tag: 'hard' }],
         problemsURL: 'www.google.com',
         solutionURL: 'www.google.com',
+        date: '29-02-20',
+    },
+    {
+        name: 'Jan Contest',
+        tags: [{ color: 'purple', tag: 'space' }],
+        problemsURL: 'www.google.com',
+        solutionURL: 'www.google.com',
+        date: '29-02-20',
+    },
+    {
+        name: 'Feb Contest',
+        tags: [{ color: 'purple', tag: 'space' }],
+        problemsURL: 'www.google.com',
+        solutionURL: 'www.google.com',
+        date: '29-02-20',
+    },
+    {
+        name: 'Sept Contest',
+        tags: [{ color: 'purple', tag: 'space' }],
+        problemsURL: 'www.google.com',
+        solutionURL: 'www.google.com',
+        date: '29-02-20',
     },
 ];

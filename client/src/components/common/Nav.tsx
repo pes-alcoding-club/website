@@ -21,18 +21,23 @@ interface NavProps {
 
 const Nav: FC<NavProps> = ({ goToBottom }) => {
     const { pathname } = useRouter();
-    if (pathname === '/') {
+
+    if (pathname === '/register') {
         return (
             <Box display="flex" p="30px" w="100%" justifyContent="space-around">
                 <LinkContainer>
-                    <a href="https://calendar.google.com/calendar?cid=N3RsZGt1dXEwcW1mOW9ub2Jxb3ByZ2Z1cDRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">
-                        Calendar
+                    <Link href="/">Home</Link>
+                </LinkContainer>
+                <LinkContainer>
+                    <a
+                        href="https://pes-alcoding-club.github.io/editorials/"
+                        style={{ cursor: 'pointer' }}
+                    >
+                        Editorials
                     </a>
                 </LinkContainer>
                 <LinkContainer>
-                    <a href="https://pes-alcoding-club.github.io/editorials/">
-                        Editorials
-                    </a>
+                    <Link href="/contests">Contests</Link>
                 </LinkContainer>
                 <LinkContainer>
                     <a
@@ -48,12 +53,23 @@ const Nav: FC<NavProps> = ({ goToBottom }) => {
         return (
             <Box display="flex" p="30px" w="100%" justifyContent="space-around">
                 <LinkContainer>
-                    <a href="https://pes-alcoding-club.github.io/editorials/">
+                    <a
+                        href="https://calendar.google.com/calendar?cid=N3RsZGt1dXEwcW1mOW9ub2Jxb3ByZ2Z1cDRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
+                        style={{ cursor: 'pointer' }}
+                    >
+                        Calendar
+                    </a>
+                </LinkContainer>
+                <LinkContainer>
+                    <a
+                        href="https://pes-alcoding-club.github.io/editorials/"
+                        style={{ cursor: 'pointer' }}
+                    >
                         Editorials
                     </a>
                 </LinkContainer>
                 <LinkContainer>
-                    <Link href="/">Home</Link>
+                    <Link href="/contests">Contests</Link>
                 </LinkContainer>
                 <LinkContainer>
                     <a
