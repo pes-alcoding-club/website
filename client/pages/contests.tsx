@@ -1,6 +1,6 @@
-import React, { useRef } from 'react';
+import { Box, Heading } from '@chakra-ui/react';
 import Head from 'next/head';
-import { Box, Divider, Heading } from '@chakra-ui/react';
+import React, { useRef } from 'react';
 import Footer from '../src/components/common/Footer';
 import Header from '../src/components/common/Header';
 import ContestGrid from '../src/components/contests/ContestGrid';
