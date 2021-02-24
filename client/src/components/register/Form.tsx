@@ -2,10 +2,13 @@ import {
     Box,
     Button,
     Container,
+    FormControl,
+    FormLabel,
     Heading,
     Input,
     InputGroup,
     InputLeftAddon,
+    Select,
     useToast,
 } from '@chakra-ui/react';
 import axios from 'axios';
@@ -21,6 +24,8 @@ const Form = () => {
     const toast = useToast();
     const [name, setName] = useState<string>('');
     const [email, setEmail] = useState<string>('');
+    const [srn, setSRN] = useState<string>('');
+    const [graduationYear, setgradYear] = useState<string>('');
     const [buttonIsLoading, setButtonLoading] = useState<boolean>(false);
     const router = useRouter();
 
@@ -29,7 +34,8 @@ const Form = () => {
         setButtonLoading(true);
         if (
             email.replace(/\s/g, '').length == 0 ||
-            name.replace(/\s/g, '').length == 0
+            name.replace(/\s/g, '').length == 0 ||
+            srn.replace(/\s/g, '').length == 0
         ) {
             toast({
                 title: 'Register failed',
@@ -42,7 +48,13 @@ const Form = () => {
             return;
         }
         await axios
-            .post(`${BASEURL}/user`, { name, email })
+            .post(`${BASEURL}/user`, {
+                name,
+                email,
+                srn,
+                graduationYear,
+                contestCode: 'MAR21',
+            })
             .then((res) => {
                 setButtonLoading(false);
                 const { err } = res.data;
@@ -98,24 +110,60 @@ const Form = () => {
                 <Heading textAlign="center" my="10">
                     Apply
                 </Heading>
-                <InputGroup size="lg" my="5" mx="auto">
-                    <InputLeftAddon children="Name" />
-                    <Input
-                        borderColor="#CBD5E0"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
+                <Box p="5">
+                    <FormControl
+                        size="lg"
+                        my="5"
+                        mx="auto"
+                        id="name"
                         isRequired
-                    />
-                </InputGroup>
-                <InputGroup size="lg" my="5">
-                    <InputLeftAddon children="Email" />
-                    <Input
-                        borderColor="#CBD5E0"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                    >
+                        <FormLabel as="legend">Name</FormLabel>
+                        <Input
+                            borderColor="#ced4da"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            isRequired
+                        />
+                    </FormControl>
+                    <FormControl
+                        size="lg"
+                        my="5"
+                        mx="auto"
+                        id="email"
                         isRequired
-                    />
-                </InputGroup>
+                    >
+                        <FormLabel as="legend">Email</FormLabel>
+                        <Input
+                            borderColor="#ced4da"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            isRequired
+                        />
+                    </FormControl>
+                    <FormControl size="lg" my="5" mx="auto" id="srn">
+                        <FormLabel as="legend">SRN</FormLabel>
+                        <Input
+                            borderColor="#ced4da"
+                            value={srn}
+                            onChange={(e) => setSRN(e.target.value)}
+                            isRequired
+                        />
+                    </FormControl>
+                    <FormControl size="lg" my="5" mx="auto" id="year">
+                        <FormLabel as="legend">Year of Graduation</FormLabel>
+                        <Select
+                            borderColor="#ced4da"
+                            placeholder="2021"
+                            defaultValue={graduationYear}
+                            onChange={(e) => setgradYear(e.target.value)}
+                        >
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                        </Select>
+                    </FormControl>
+                </Box>
                 <Box display="flex" justifyContent="center" my="10">
                     <Button
                         size="lg"
