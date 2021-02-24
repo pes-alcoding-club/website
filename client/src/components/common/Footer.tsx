@@ -1,9 +1,8 @@
-import { Box, Button, Divider, Image, Text } from '@chakra-ui/react';
+import { Box, Button, Divider, Image } from '@chakra-ui/react';
+import { useRouter } from 'next/router';
 import React from 'react';
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
-import { BASEURL } from '../../config';
-import { useRouter } from 'next/router';
 
 const Footer = () => {
     const { pathname } = useRouter();
@@ -12,7 +11,7 @@ const Footer = () => {
             w="100vw"
             p="10px"
             pb={{ base: pathname === '/' ? '85px' : '10px', lg: '10px' }}
-            backgroundImage={`url(${BASEURL}img/shattered-island.gif)`}
+            backgroundImage={`url(/shattered-island.gif)`}
             mt="100"
         >
             <Box display="flex" justifyContent="space-evenly">
@@ -23,7 +22,12 @@ const Footer = () => {
                     height="100%"
                 >
                     <Box width={{ lg: '70%', base: '100%' }}>
-                        <Image src="/Logo-w.png" userSelect="none" />
+                        <Image
+                            height="100%"
+                            width="100%"
+                            src="/Logo-w.png"
+                            alt="alcoding logo"
+                        />
                     </Box>
                 </Box>
                 <Box

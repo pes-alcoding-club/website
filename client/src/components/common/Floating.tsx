@@ -1,7 +1,7 @@
 import { Box, Button, Text } from '@chakra-ui/react';
+import Link from 'next/link';
 import React from 'react';
 import MediaQuery from 'react-responsive';
-import Link from 'next/link';
 
 const Floating = () => {
     return (

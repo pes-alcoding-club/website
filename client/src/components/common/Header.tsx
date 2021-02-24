@@ -1,7 +1,7 @@
-import { Box, Button, Heading, Image } from '@chakra-ui/react';
+import { Box, Button, Heading } from '@chakra-ui/react';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { BASEURL } from '../../config';
 import Nav from './Nav';
 
 interface HeaderProps {
@@ -10,16 +10,15 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ showApplyBtn, goToBottom }) => (
-    <Box w="100vw" backgroundImage={`url(${BASEURL}img/shattered-island.gif)`}>
+    <Box w="100vw" backgroundImage={`url(/shattered-island.gif)`}>
         <a href="/">
-            <Box mx="auto">
+            <Box mx="auto" display="flex" justifyContent="center">
                 <Image
-                    h="250px"
-                    w="250px"
-                    mx="auto"
-                    pt="10px"
+                    height="250px"
+                    width="250px"
                     src="/Logo-w.png"
-                    userSelect="none"
+                    alt="alcoding logo"
+                    priority
                 />
             </Box>
         </a>

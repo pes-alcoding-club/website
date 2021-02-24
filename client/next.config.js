@@ -6,7 +6,7 @@ module.exports = {
     trailingSlash: true,
     assetPrefix: assetPrefix,
     images: {
-        loader: "imgix"
+        domains: ['localhost'],
     },
     webpack(config) {
         config.module.rules.push({
