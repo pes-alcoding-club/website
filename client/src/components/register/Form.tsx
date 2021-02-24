@@ -106,11 +106,11 @@ const Form = () => {
 
     return (
         <Box>
-            <Container id="form">
-                <Heading textAlign="center" my="10">
+            <Container id="form" p="5">
+                <Heading textAlign="center" my={{ lg: '10', base: '2' }}>
                     Apply
                 </Heading>
-                <Box p="5">
+                <Box>
                     <FormControl
                         size="lg"
                         my="5"
