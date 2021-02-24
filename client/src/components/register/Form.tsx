@@ -167,7 +167,8 @@ const Form = () => {
                 <Box display="flex" justifyContent="center" my="10">
                     <Button
                         size="lg"
-                        _hover={{ textColor: 'whitesmoke' }}
+                        textColor="whitesmoke"
+                        _hover={{ bg: '#b0152f', textColor: 'whitesmoke' }}
                         bgColor="#e94560"
                         onClick={onSubmit}
                         isLoading={buttonIsLoading}

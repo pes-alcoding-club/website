@@ -11,7 +11,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ showApplyBtn, goToBottom }) => (
     <Box w="100vw" backgroundImage={`url(/shattered-island.gif)`}>
-        <a href="/">
+        <a href="/" style={{ cursor: 'pointer' }}>
             <Box mx="auto" display="flex" justifyContent="center">
                 <Image
                     height="250px"

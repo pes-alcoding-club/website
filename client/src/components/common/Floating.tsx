@@ -10,6 +10,7 @@ const Floating = () => {
                 <Link href="/register">
                     <Button
                         size="lg"
+                        textColor="whitesmoke"
                         _hover={{
                             bg: '#b0152f',
                             textColor: 'whitesmoke',
@@ -22,7 +23,6 @@ const Floating = () => {
                         bottom="30px"
                         right="30px"
                         fontSize="lg"
-                        textColor="black"
                     >
                         Apply Now
                     </Button>
@@ -35,6 +35,7 @@ const Floating = () => {
                             bg: '#b0152f',
                             textColor: 'whitesmoke',
                         }}
+                        textColor="whitesmoke"
                         bgColor="#e94560"
                         bottom="0"
                         w="100vw"
