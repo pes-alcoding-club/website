@@ -1,7 +1,7 @@
-import { Box, Button, Heading } from '@chakra-ui/react';
+import { Box, Button, Heading, Image } from '@chakra-ui/react';
 import Link from 'next/link';
 import React from 'react';
-import Logo from '../../../assets/Logo.svg';
+import { BASEURL } from '../../config';
 import Nav from './Nav';
 
 interface HeaderProps {
@@ -10,29 +10,27 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ showApplyBtn, goToBottom }) => (
-    <Box
-        w="100vw"
-        backgroundImage="url(https://images.unsplash.com/photo-1549880181-56a44cf4a9a5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80)"
-        backgroundPosition="center"
-        backgroundRepeat="no-repeat"
-        backgroundSize="cover"
-    >
+    <Box w="100vw" backgroundImage={`url(${BASEURL}img/shattered-island.gif)`}>
         <a href="/">
-                <Logo
-                    style={{
-                        height: '200px',
-                        width: '200px',
-                        margin: '0 auto',
-                        paddingTop: '10px',
-                    }}
+            <Box mx="auto">
+                <Image
+                    h="250px"
+                    w="250px"
+                    mx="auto"
+                    pt="10px"
+                    src="/Logo-w.png"
+                    userSelect="none"
                 />
+            </Box>
         </a>
         <Heading
             as="h2"
             textAlign="center"
             fontSize={{ base: '4xl', lg: '6xl' }}
         >
-            <Link href="/">The Alcoding Club</Link>
+            <Link href="/">
+                <span style={{ color: 'whitesmoke' }}>The Alcoding Club</span>
+            </Link>
         </Heading>
         {showApplyBtn && (
             <Link href="/register">
@@ -40,13 +38,13 @@ const Header: React.FC<HeaderProps> = ({ showApplyBtn, goToBottom }) => (
                     fontSize={{ lg: 'xl', base: 'md' }}
                     size="lg"
                     _hover={{
-                        bg: "#b0152f",
+                        bg: '#b0152f',
                         textColor: 'whitesmoke',
                     }}
                     bgColor="#e94560"
-                    mt="30px"
+                    mt="50px"
                     mx="auto"
-                    mb="90px"
+                    mb={{ lg: '90px', base: '50px' }}
                     display="block"
                     textColor="whitesmoke"
                 >
