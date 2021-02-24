@@ -1,7 +1,7 @@
-import { Box, Image } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
+import Image from 'next/image';
 import React, { FC, useState } from 'react';
 import { FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa';
-import { BASEURL } from '../../config';
 // help from: https://www.youtube.com/watch?v=l1MYfu5YWHc :)
 
 interface CarouselProps {
@@ -48,9 +48,10 @@ const Carousel: FC<CarouselProps> = ({ data }) => {
                     {key === current && (
                         <Image
                             alt="Alcoding Club Contest"
-                            w={{ lg: '778px', base: '357px' }}
-                            h={{ lg: '556px', base: '236px' }}
-                            src={`${BASEURL}img${src}`}
+                            width="778px"
+                            height="556px"
+                            src={src}
+                            quality={100}
                         />
                     )}
                 </Box>
