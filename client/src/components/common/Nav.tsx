@@ -8,7 +8,7 @@ const LinkContainer = ({ children }) => (
         userSelect="none"
         _hover={{ color: '#e94560' }}
         color="whitesmoke"
-        fontSize={{ lg: 'xl', base: 'md' }}
+        fontSize={{ lg: 'xl', base: 'sm' }}
         fontWeight="bold"
     >
         {children}
@@ -38,6 +38,38 @@ const Nav: FC<NavProps> = ({ goToBottom }) => {
                 </LinkContainer>
                 <LinkContainer>
                     <Link href="/contests">Contests</Link>
+                </LinkContainer>
+                <LinkContainer>
+                    <a
+                        onClick={() => goToBottom()}
+                        style={{ cursor: 'pointer' }}
+                    >
+                        Contact Us
+                    </a>
+                </LinkContainer>
+            </Box>
+        );
+    } else if (pathname === '/contests') {
+        return (
+            <Box display="flex" p="30px" w="100%" justifyContent="space-around">
+                <LinkContainer>
+                    <Link href="/">Home</Link>
+                </LinkContainer>
+                <LinkContainer>
+                    <a
+                        href="https://calendar.google.com/calendar?cid=N3RsZGt1dXEwcW1mOW9ub2Jxb3ByZ2Z1cDRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
+                        style={{ cursor: 'pointer' }}
+                    >
+                        Calendar
+                    </a>
+                </LinkContainer>
+                <LinkContainer>
+                    <a
+                        href="https://pes-alcoding-club.github.io/editorials/"
+                        style={{ cursor: 'pointer' }}
+                    >
+                        Editorials
+                    </a>
                 </LinkContainer>
                 <LinkContainer>
                     <a
