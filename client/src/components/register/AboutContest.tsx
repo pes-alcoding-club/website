@@ -3,12 +3,21 @@ import React from 'react';
 
 const AboutContest = ({}) => {
     return (
-        <Box>
-            <Heading textAlign="center" my="10">
-                About the contest
+        <Box w="100%" p="5">
+            <Heading
+                fontSize="4xl"
+                textAlign="center"
+                my={{ lg: '35px', base: '10px' }}
+                mx="auto"
+            >
+                About the Contest
             </Heading>
-            <Box w={{ lg: '50%', base: '95%' }} mx="auto">
-                <Text textAlign="center" fontSize="lg" my="5" p="5">
+            <Box w={{ xl: '45%', lg: '60%', base: '95%' }} mx="auto">
+                <Text
+                    fontSize={{ lg: 'xl', base: 'lg' }}
+                    my="5"
+                    lineHeight="32px"
+                >
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Duis blandit posuere est, eget lacinia est fermentum at.
                     Mauris et ultrices arcu. Aliquam vitae pulvinar ex. Maecenas
