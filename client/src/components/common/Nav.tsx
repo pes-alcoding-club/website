@@ -16,15 +16,29 @@ const LinkContainer = ({ children }) => (
 );
 
 interface NavProps {
-    goToBottom: () => void;
+    containerRef: React.MutableRefObject<undefined>;
 }
 
-const Nav: FC<NavProps> = ({ goToBottom }) => {
+const Nav: FC<NavProps> = ({ containerRef }) => {
     const { pathname } = useRouter();
+    const goToBottom = () => {
+        // @ts-ignore
+        containerRef.current.scrollIntoView({
+            behavior: 'smooth',
+            block: 'end',
+            inline: 'nearest',
+        });
+    };
 
     if (pathname === '/register') {
         return (
-            <Box display="flex" p="30px" w="100%" justifyContent="space-around">
+            <Box
+                display="flex"
+                p="30px"
+                w="100%"
+                justifyContent="space-around"
+                ref={containerRef}
+            >
                 <LinkContainer>
                     <Link href="/">Home</Link>
                 </LinkContainer>
@@ -51,7 +65,13 @@ const Nav: FC<NavProps> = ({ goToBottom }) => {
         );
     } else if (pathname === '/contests') {
         return (
-            <Box display="flex" p="30px" w="100%" justifyContent="space-around">
+            <Box
+                display="flex"
+                p="30px"
+                w="100%"
+                justifyContent="space-around"
+                ref={containerRef}
+            >
                 <LinkContainer>
                     <Link href="/">Home</Link>
                 </LinkContainer>
@@ -83,7 +103,13 @@ const Nav: FC<NavProps> = ({ goToBottom }) => {
         );
     } else {
         return (
-            <Box display="flex" p="30px" w="100%" justifyContent="space-around">
+            <Box
+                display="flex"
+                p="30px"
+                w="100%"
+                justifyContent="space-around"
+                ref={containerRef}
+            >
                 <LinkContainer>
                     <a
                         href="https://calendar.google.com/calendar?cid=N3RsZGt1dXEwcW1mOW9ub2Jxb3ByZ2Z1cDRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"

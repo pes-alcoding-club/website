@@ -9,22 +9,13 @@ interface ContestsProps {}
 
 const Contests: React.FC<ContestsProps> = ({}) => {
     const containerRef = useRef();
-    const goToBottom = () => {
-        // @ts-ignore
-        containerRef.current.scrollIntoView({
-            behavior: 'smooth',
-            block: 'end',
-            inline: 'nearest',
-        });
-    };
-
     return (
         <>
             <Head>
                 <title>The Alcoding Club</title>
             </Head>
             <Box ref={containerRef}>
-                <Header showApplyBtn goToBottom={goToBottom} />
+                <Header containerRef={containerRef} showApplyBtn />
                 <Heading textAlign="center" my="10">
                     Previous Contests
                 </Heading>

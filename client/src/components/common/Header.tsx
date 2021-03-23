@@ -6,10 +6,10 @@ import Nav from './Nav';
 
 interface HeaderProps {
     showApplyBtn?: boolean;
-    goToBottom: () => void;
+    containerRef: React.MutableRefObject<undefined>;
 }
 
-const Header: React.FC<HeaderProps> = ({ showApplyBtn, goToBottom }) => (
+const Header: React.FC<HeaderProps> = ({ showApplyBtn, containerRef }) => (
     <Box w="100vw" backgroundImage={`url(/shattered-island.gif)`}>
         <a href="/" style={{ cursor: 'pointer' }}>
             <Box mx="auto" display="flex" justifyContent="center">
@@ -51,7 +51,7 @@ const Header: React.FC<HeaderProps> = ({ showApplyBtn, goToBottom }) => (
                 </Button>
             </Link>
         )}
-        <Nav goToBottom={goToBottom} />
+        <Nav containerRef={containerRef} />
     </Box>
 );
 

@@ -8,22 +8,13 @@ import Header from '../src/components/common/Header';
 
 const Register = () => {
     const containerRef = useRef();
-    const goToBottom = () => {
-        // @ts-ignore
-        containerRef.current.scrollIntoView({
-            behavior: 'smooth',
-            block: 'end',
-            inline: 'nearest',
-        });
-    };
-
     return (
         <>
             <Head>
                 <title>The Alcoding Club</title>
             </Head>
             <Box w="100vw" ref={containerRef}>
-                <Header goToBottom={goToBottom} />
+                <Header containerRef={containerRef} />
                 <AboutContest />
                 <Form />
                 <Footer />
