@@ -26,6 +26,7 @@ const Header: React.FC<HeaderProps> = ({ showApplyBtn, goToBottom }) => (
             as="h2"
             textAlign="center"
             fontSize={{ base: '4xl', lg: '6xl' }}
+            mb="30px"
         >
             <Link href="/">
                 <span style={{ color: 'whitesmoke' }}>The Alcoding Club</span>
@@ -41,9 +42,8 @@ const Header: React.FC<HeaderProps> = ({ showApplyBtn, goToBottom }) => (
                         textColor: 'whitesmoke',
                     }}
                     bgColor="#e94560"
-                    mt="50px"
                     mx="auto"
-                    mb={{ lg: '90px', base: '50px' }}
+                    my="50px"
                     display="block"
                     textColor="whitesmoke"
                 >
