@@ -11,7 +11,11 @@ const AboutUs = () => (
         >
             About Us
         </Heading>
-        <Box w={{ xl: '45%', lg: '60%', base: '95%' }} mx="auto">
+        <Box
+            w={{ xl: '45%', lg: '60%', base: '95%' }}
+            mx="auto"
+            textAlign="justify"
+        >
             <Text fontSize={{ lg: 'xl', base: 'lg' }} my="5" lineHeight="32px">
                 The Alcoding Club is the official Competitive Programming Club
                 under the CSE Department of PES University. The club aims to
