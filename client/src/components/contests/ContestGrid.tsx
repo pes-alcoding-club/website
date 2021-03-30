@@ -1,6 +1,6 @@
 import { SimpleGrid } from '@chakra-ui/react';
 import React from 'react';
-import { contests } from '../../config';
+import { contests } from '../../utils/config';
 import ContestCard from './ContestCard';
 
 const ContestGrid = ({}) => {

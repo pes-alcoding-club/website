@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Divider } from '@chakra-ui/react';
 import Head from 'next/head';
 import React, { useRef } from 'react';
 import AboutContest from '../src/components/register/AboutContest';
@@ -16,6 +16,7 @@ const Register = () => {
             <Box w="100vw" ref={containerRef}>
                 <Header containerRef={containerRef} />
                 <AboutContest />
+                <Divider my="2" />
                 <Form />
                 <Footer />
             </Box>
