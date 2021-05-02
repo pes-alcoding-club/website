@@ -44,7 +44,7 @@ const AboutContest = ({}) => {
                     lineHeight="32px"
                 >
                     The contest is open to anyone who wants to participate, so
-                    go ahead and register
+                    go ahead and register.
                 </Text>
             </Box>
         </Box>
