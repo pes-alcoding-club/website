@@ -16,9 +16,10 @@ export interface IContest {
 export const contests: IContest[] = [
     {
         name: 'Alcoding Summer Challenge 2020',
-        tags: [{ color: 'purple', tag: 'Space' }],
-        problemsURL: 'https://pes-alcoding-club.github.io/editorials/',
+        tags: [{ color: 'red', tag: 'summer' }],
+        date: 'Jun 14 2020',
+        problemsURL:
+            'https://www.hackerrank.com/contests/alcoding-summer-challenge/challenges',
         solutionURL: 'https://pes-alcoding-club.github.io/editorials/',
-        date: '14-06-2020',
     },
 ];
