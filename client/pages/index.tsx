@@ -6,7 +6,7 @@ import Footer from '../src/components/common/Footer';
 import Header from '../src/components/common/Header';
 import AboutUs from '../src/components/landing/AboutUs';
 import Carousel from '../src/components/landing/Carousel';
-import { images } from '../src/utils/config';
+import { images } from '../src/config';
 
 const Landing = () => {
     const containerRef = useRef();
