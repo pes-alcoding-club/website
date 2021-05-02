@@ -6,26 +6,19 @@ import {
     FormLabel,
     Heading,
     Input,
-    InputGroup,
-    InputLeftAddon,
     Select,
     useToast,
 } from '@chakra-ui/react';
-import axios from 'axios';
+import axios from '../../utils/axios';
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
-
-const BASEURL =
-    process.env.NODE_ENV === 'development'
-        ? 'http://localhost:5000'
-        : 'https://alcoding-website-backend.herokuapp.com';
 
 const Form = () => {
     const toast = useToast();
     const [name, setName] = useState<string>('');
     const [email, setEmail] = useState<string>('');
     const [srn, setSRN] = useState<string>('');
-    const [graduationYear, setgradYear] = useState<string>('');
+    const [graduationYear, setgradYear] = useState<string>('2021');
     const [buttonIsLoading, setButtonLoading] = useState<boolean>(false);
     const router = useRouter();
 
@@ -39,7 +32,7 @@ const Form = () => {
         ) {
             toast({
                 title: 'Register failed',
-                description: 'Fill out all entry fields to register.',
+                description: 'Fill out all fields to register.',
                 status: 'error',
                 duration: 9000,
                 isClosable: true,
@@ -48,7 +41,7 @@ const Form = () => {
             return;
         }
         await axios
-            .post(`${BASEURL}/user`, {
+            .post('/user', {
                 name,
                 email,
                 srn,
@@ -58,7 +51,6 @@ const Form = () => {
             .then((res) => {
                 setButtonLoading(false);
                 const { err } = res.data;
-
                 if (err) {
                     if (err.code === 11000) {
                         toast({
@@ -91,7 +83,8 @@ const Form = () => {
                     router.push('/');
                 }
             })
-            .catch(() => {
+            .catch((err) => {
+                console.log(err);
                 setButtonLoading(false);
                 toast({
                     title: 'Registration failed',

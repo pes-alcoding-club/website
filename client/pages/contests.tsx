@@ -1,4 +1,4 @@
-import { Box, Heading } from '@chakra-ui/react';
+import { Box, Divider, Heading } from '@chakra-ui/react';
 import Head from 'next/head';
 import React, { useRef } from 'react';
 import Footer from '../src/components/common/Footer';
@@ -19,6 +19,7 @@ const Contests: React.FC<ContestsProps> = ({}) => {
                 <Heading textAlign="center" my="10">
                     Previous Contests
                 </Heading>
+                <Divider my="5" />
                 <ContestGrid />
                 <Footer />
             </Box>
