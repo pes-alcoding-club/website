@@ -15,45 +15,10 @@ export interface IContest {
 
 export const contests: IContest[] = [
     {
-        name: 'Jan Contest',
-        tags: [{ color: 'purple', tag: 'space' }],
-        problemsURL: 'http://www.google.com',
-        solutionURL: 'www.google.com',
-        date: '29-02-20',
-    },
-    {
-        name: 'Feb Contest',
-        tags: [{ color: 'green', tag: 'easy' }],
-        problemsURL: 'www.google.com',
-        solutionURL: 'www.google.com',
-        date: '29-02-20',
-    },
-    {
-        name: 'Sept Contest',
-        tags: [{ color: 'red', tag: 'hard' }],
-        problemsURL: 'www.google.com',
-        solutionURL: 'www.google.com',
-        date: '29-02-20',
-    },
-    {
-        name: 'Jan Contest',
-        tags: [{ color: 'purple', tag: 'space' }],
-        problemsURL: 'www.google.com',
-        solutionURL: 'www.google.com',
-        date: '29-02-20',
-    },
-    {
-        name: 'Feb Contest',
-        tags: [{ color: 'purple', tag: 'space' }],
-        problemsURL: 'www.google.com',
-        solutionURL: 'www.google.com',
-        date: '29-02-20',
-    },
-    {
-        name: 'Sept Contest',
-        tags: [{ color: 'purple', tag: 'space' }],
-        problemsURL: 'www.google.com',
-        solutionURL: 'www.google.com',
-        date: '29-02-20',
+        name: 'Alcoding Summer Challenge 2020',
+        tags: [{ color: 'purple', tag: 'Space' }],
+        problemsURL: 'https://pes-alcoding-club.github.io/editorials/',
+        solutionURL: 'https://pes-alcoding-club.github.io/editorials/',
+        date: '14-06-2020',
     },
 ];
