@@ -46,7 +46,7 @@ const Form = () => {
                 email,
                 srn,
                 graduationYear,
-                contestCode: 'MAR21',
+                contestCode: 'SUMMER_21',
             })
             .then((res) => {
                 setButtonLoading(false);
@@ -84,7 +84,6 @@ const Form = () => {
                 }
             })
             .catch((err) => {
-                console.log(err);
                 setButtonLoading(false);
                 toast({
                     title: 'Registration failed',
