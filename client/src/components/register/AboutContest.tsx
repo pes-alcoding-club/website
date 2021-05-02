@@ -18,23 +18,33 @@ const AboutContest = ({}) => {
                     my="5"
                     lineHeight="32px"
                 >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Duis blandit posuere est, eget lacinia est fermentum at.
-                    Mauris et ultrices arcu. Aliquam vitae pulvinar ex. Maecenas
-                    vitae luctus sapien, nec laoreet metus. Nam ultricies
-                    euismod dolor id vulputate. Cras sit amet faucibus enim, in
-                    pulvinar metus. Pellentesque nec facilisis sem. Integer
-                    vitae dolor sit amet quam tempor commodo. Vestibulum ante
-                    ipsum primis in faucibus orci luctus et ultrices posuere
-                    cubilia curae; Phasellus vel massa et dolor tristique
-                    sollicitudin non sed velit. Vestibulum ante ipsum primis in
-                    faucibus orci luctus et ultrices posuere cubilia curae;
-                    Fusce in augue nulla. Nulla non lobortis purus. Proin
-                    vestibulum mollis ipsum in condimentum. Ut eu sollicitudin
-                    quam. Donec vehicula arcu a sapien molestie tempus. Nullam
-                    et placerat nibh. Quisque blandit sed dui eget vehicula.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec sit amet enim pharetra, posuere odio nec, mollis mi.
+                    The Alcoding Club, the official Coding Club of PES
+                    University presents to you, The Summer Challenge '21!
+                </Text>
+                <Text
+                    fontSize={{ lg: 'xl', base: 'lg' }}
+                    my="5"
+                    lineHeight="32px"
+                >
+                    Duke it out with your fellow competitors in this three hour
+                    contest of competitive coding from 7:30PM to 10:30PM on May
+                    9th, and emerge victorious.
+                </Text>
+                <Text
+                    fontSize={{ lg: 'xl', base: 'lg' }}
+                    my="5"
+                    lineHeight="32px"
+                >
+                    This is a chance for you to find out what competitive coding
+                    is all about, and maybe put yourselves on our radar!
+                </Text>
+                <Text
+                    fontSize={{ lg: 'xl', base: 'lg' }}
+                    my="5"
+                    lineHeight="32px"
+                >
+                    The contest is open to anyone who wants to participate, so
+                    go ahead and register
                 </Text>
             </Box>
         </Box>
