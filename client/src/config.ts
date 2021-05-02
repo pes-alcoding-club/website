@@ -1,9 +1,11 @@
 export const images = ['/img1.jpg', '/img2.jpg', '/img3.jpg', '/img4.jpg'];
 
+export const SERVER_URL = process.env.NEXT_PUBLIC_SERVER_URL;
+
 export const BASEURL =
     process.env.NODE_ENV === 'development'
         ? 'http://localhost:5000/'
-        : 'https://alcoding-website-backend.herokuapp.com/';
+        : SERVER_URL;
 
 export interface IContest {
     name: string;
