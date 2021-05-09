@@ -1,4 +1,4 @@
-import { Box, Button, Heading } from '@chakra-ui/react';
+import { Box, Button, Heading , Link as ChakraLink} from '@chakra-ui/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -33,7 +33,7 @@ const Header: React.FC<HeaderProps> = ({ showApplyBtn, containerRef }) => (
             </Link>
         </Heading>
         {showApplyBtn && (
-            <Link href="/register">
+            <ChakraLink href="https://www.hackerrank.com/alcoding-summer-challenge-2021">
                 <Button
                     fontSize={{ lg: 'xl', base: 'md' }}
                     size="lg"
@@ -49,7 +49,7 @@ const Header: React.FC<HeaderProps> = ({ showApplyBtn, containerRef }) => (
                 >
                     Apply to our Monthly Challenge
                 </Button>
-            </Link>
+            </ChakraLink>
         )}
         <Nav containerRef={containerRef} />
     </Box>
