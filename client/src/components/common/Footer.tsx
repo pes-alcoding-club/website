@@ -1,7 +1,7 @@
 import { Box, Button, Divider, Image } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
-import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaInstagram, FaLinkedin, FaDiscord } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
 
 const Footer = () => {
@@ -15,33 +15,23 @@ const Footer = () => {
             mt="100"
         >
             <Box display="flex" justifyContent="space-evenly">
-                <Box
-                    display="flex"
-                    justifyContent="center"
-                    width={{ base: '50%', lg: '25%' }}
-                    height="100%"
-                >
-                    <Box width={{ lg: '70%', base: '100%' }}>
-                        <Image
-                            height="100%"
-                            width="100%"
-                            src="/Logo-w.png"
-                            alt="alcoding logo"
-                        />
-                    </Box>
-                </Box>
-                <Box
-                    display={{ lg: 'flex', base: 'none' }}
-                    justifyContent="center"
-                    flexDir="column"
-                >
-                    <Divider
-                        orientation="vertical"
-                        color="white"
-                        height="80%"
-                    />
-                </Box>
-                <Box display="flex" justifyContent="center" flexDir="column">
+               
+                <Box display="flex" justifyContent="center" >
+                    <a href="https://discord.com/invite/WJyMrRyfW8">
+                            <Button
+                                m="2"
+                                w={{ lg: '100%', base: '90%' }}
+                                fontSize={{ lg: 'xl', base: 'md' }}
+                                _hover={{
+                                    bg: '#bc2a8d',
+                                    textColor: 'whitesmoke',
+                                }}
+                                leftIcon={<FaDiscord />}
+                                margin={10}
+                            >
+                                Discord
+                            </Button>
+                        </a>
                     <a href="https://www.instagram.com/thealcodingclub/">
                         <Button
                             m="2"
@@ -52,6 +42,7 @@ const Footer = () => {
                                 textColor: 'whitesmoke',
                             }}
                             leftIcon={<FaInstagram />}
+                            margin={10}
                         >
                             Instagram
                         </Button>
@@ -66,6 +57,7 @@ const Footer = () => {
                                 textColor: 'whitesmoke',
                             }}
                             leftIcon={<FaLinkedin />}
+                            margin={10}
                         >
                             Linkedin
                         </Button>
@@ -80,6 +72,7 @@ const Footer = () => {
                                 textColor: 'whitesmoke',
                             }}
                             leftIcon={<FaGithub />}
+                            margin={10}
                         >
                             Github
                         </Button>
@@ -94,6 +87,7 @@ const Footer = () => {
                                 textColor: 'whitesmoke',
                             }}
                             leftIcon={<SiGmail />}
+                            margin={10}
                         >
                             Email
                         </Button>

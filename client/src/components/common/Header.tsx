@@ -33,7 +33,7 @@ const Header: React.FC<HeaderProps> = ({ showApplyBtn, containerRef }) => (
             </Link>
         </Heading>
         {showApplyBtn && (
-            <Link href="/register">
+            <a href="https://discord.com/invite/WJyMrRyfW8">
                 <Button
                     fontSize={{ lg: 'xl', base: 'md' }}
                     size="lg"
@@ -47,9 +47,9 @@ const Header: React.FC<HeaderProps> = ({ showApplyBtn, containerRef }) => (
                     display="block"
                     textColor="whitesmoke"
                 >
-                    Apply to our Monthly Challenge
+                    Join our Community
                 </Button>
-            </Link>
+            </a>
         )}
         <Nav containerRef={containerRef} />
     </Box>

@@ -44,7 +44,7 @@ const Nav: FC<NavProps> = ({ containerRef }) => {
                 </LinkContainer>
                 <LinkContainer>
                     <a
-                        href="https://pes-alcoding-club.github.io/editorials/"
+                        href="/problems"
                         style={{ cursor: 'pointer' }}
                     >
                         Editorials
@@ -77,15 +77,15 @@ const Nav: FC<NavProps> = ({ containerRef }) => {
                 </LinkContainer>
                 <LinkContainer>
                     <a
-                        href="https://calendar.google.com/calendar?cid=N3RsZGt1dXEwcW1mOW9ub2Jxb3ByZ2Z1cDRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
+                        href="/upcoming"
                         style={{ cursor: 'pointer' }}
                     >
-                        Calendar
+                        Upcoming Events
                     </a>
                 </LinkContainer>
                 <LinkContainer>
                     <a
-                        href="https://pes-alcoding-club.github.io/editorials/"
+                        href="/problems"
                         style={{ cursor: 'pointer' }}
                     >
                         Editorials
@@ -112,15 +112,15 @@ const Nav: FC<NavProps> = ({ containerRef }) => {
             >
                 <LinkContainer>
                     <a
-                        href="https://calendar.google.com/calendar?cid=N3RsZGt1dXEwcW1mOW9ub2Jxb3ByZ2Z1cDRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
+                        href="/upcoming"
                         style={{ cursor: 'pointer' }}
                     >
-                        Calendar
+                        Upcoming Events
                     </a>
                 </LinkContainer>
                 <LinkContainer>
                     <a
-                        href="https://pes-alcoding-club.github.io/editorials/"
+                        href="/problems"
                         style={{ cursor: 'pointer' }}
                     >
                         Editorials

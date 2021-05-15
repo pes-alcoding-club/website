@@ -15,45 +15,10 @@ export interface IContest {
 
 export const contests: IContest[] = [
     {
-        name: 'Jan Contest',
-        tags: [{ color: 'purple', tag: 'space' }],
+        name: 'Alcoding Summer Challenge 2021',
+        tags: [{ color: 'orange', tag: 'medium' }],
         problemsURL: 'http://www.google.com',
-        solutionURL: 'www.google.com',
-        date: '29-02-20',
-    },
-    {
-        name: 'Feb Contest',
-        tags: [{ color: 'green', tag: 'easy' }],
-        problemsURL: 'www.google.com',
-        solutionURL: 'www.google.com',
-        date: '29-02-20',
-    },
-    {
-        name: 'Sept Contest',
-        tags: [{ color: 'red', tag: 'hard' }],
-        problemsURL: 'www.google.com',
-        solutionURL: 'www.google.com',
-        date: '29-02-20',
-    },
-    {
-        name: 'Jan Contest',
-        tags: [{ color: 'purple', tag: 'space' }],
-        problemsURL: 'www.google.com',
-        solutionURL: 'www.google.com',
-        date: '29-02-20',
-    },
-    {
-        name: 'Feb Contest',
-        tags: [{ color: 'purple', tag: 'space' }],
-        problemsURL: 'www.google.com',
-        solutionURL: 'www.google.com',
-        date: '29-02-20',
-    },
-    {
-        name: 'Sept Contest',
-        tags: [{ color: 'purple', tag: 'space' }],
-        problemsURL: 'www.google.com',
-        solutionURL: 'www.google.com',
-        date: '29-02-20',
+        solutionURL: '/problems',
+        date: 'May 9th, 2021',
     },
 ];

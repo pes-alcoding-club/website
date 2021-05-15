@@ -1,7 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import Head from 'next/head';
 import React, { useRef } from 'react';
-import Floating from '../src/components/common/Floating';
 import Footer from '../src/components/common/Footer';
 import Header from '../src/components/common/Header';
 import AboutUs from '../src/components/landing/AboutUs';
@@ -20,7 +19,6 @@ const Landing = () => {
                 <AboutUs />
                 <Carousel data={images} />
                 <Footer />
-                <Floating />
             </Box>
         </>
     );

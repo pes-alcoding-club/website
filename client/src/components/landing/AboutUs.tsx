@@ -23,12 +23,12 @@ const AboutUs = () => (
                 problem solving in the campus through our workshops and
                 discussions sessions, where we discuss previous online
                 competition problems and try to come up with solutions to those
-                problems. The competitions we participate in can be found here
+                problems. The competitions we conduct can be found here
                 on our{' '}
                 <span style={{ color: '#fd6378' }}>
-                    <Link href="https://calendar.google.com/calendar?cid=N3RsZGt1dXEwcW1mOW9ub2Jxb3ByZ2Z1cDRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">
-                        calendar
-                    </Link>
+                    <a href="https://discord.com/invite/WJyMrRyfW8">
+                        discord
+                    </a>
                 </span>
                 .
             </Text>
@@ -42,18 +42,7 @@ const AboutUs = () => (
             <Text fontSize={{ lg: 'xl', base: 'lg' }} my="5" lineHeight="32px">
                 While most of the competitions we host are online, we also host
                 an annual flagship coding competition where students from
-                colleges all over the country compete. Finally, the Alcoding
-                Club undertakes various development projects every year, and
-                offers summer internships to work on the same. You can check out
-                our previous and ongoing projects{'  '}
-                <Link
-                    color="#fd6378"
-                    href="https://github.com/pes-alcoding-club"
-                    userSelect="none"
-                >
-                    here
-                </Link>
-                .
+                colleges all over the country compete.
             </Text>
         </Box>
     </Box>
