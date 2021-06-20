@@ -19,7 +19,7 @@ const AboutContest = ({}) => {
                     lineHeight="32px"
                 >
                     The Alcoding Club, the official Coding Club of PES
-                    University presents to you, The Summer Challenge '21!
+                    University presents to you, The June Challenge '21!
                 </Text>
                 <Text
                     fontSize={{ lg: 'xl', base: 'lg' }}
@@ -27,8 +27,8 @@ const AboutContest = ({}) => {
                     lineHeight="32px"
                 >
                     Duke it out with your fellow competitors in this three hour
-                    contest of competitive coding from 7:30PM to 10:30PM on May
-                    9th, and emerge victorious.
+                    contest of competitive coding from 7:30PM to 10:30PM on June
+                    29th, and emerge victorious.
                 </Text>
                 <Text
                     fontSize={{ lg: 'xl', base: 'lg' }}

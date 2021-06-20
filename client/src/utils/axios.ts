@@ -1,4 +1,4 @@
-import _axios from 'axios';
+import axios from 'axios';
 import { BASEURL } from '../config';
 
-export default _axios.create({ baseURL: BASEURL });
+export default axios.create({ baseURL: BASEURL });

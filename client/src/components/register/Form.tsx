@@ -46,7 +46,7 @@ const Form = () => {
                 email,
                 srn,
                 graduationYear,
-                contestCode: 'SUMMER_21',
+                contestCode: 'JUNE_21',
             })
             .then((res) => {
                 setButtonLoading(false);

@@ -1,4 +1,5 @@
 import { Box, Button, Text, Link } from '@chakra-ui/react';
+import NextLink from 'next/link';
 import React from 'react';
 import MediaQuery from 'react-responsive';
 
@@ -6,7 +7,7 @@ const Floating = () => {
     return (
         <>
             <MediaQuery minDeviceWidth={1224}>
-                <Link href="https://www.hackerrank.com/alcoding-summer-challenge-2021">
+                <Link href="/register" as={NextLink}>
                     <Button
                         size="lg"
                         textColor="whitesmoke"
@@ -28,7 +29,7 @@ const Floating = () => {
                 </Link>
             </MediaQuery>
             <MediaQuery maxDeviceWidth={1224}>
-                <Link href="https://www.hackerrank.com/alcoding-summer-challenge-2021">
+                <Link href="/register" as={NextLink}>
                     <Box
                         _hover={{
                             bg: '#b0152f',
@@ -57,4 +58,5 @@ const Floating = () => {
         </>
     );
 };
+
 export default Floating;

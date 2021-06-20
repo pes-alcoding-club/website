@@ -24,4 +24,12 @@ export const contests: IContest[] = [
             'https://www.hackerrank.com/contests/alcoding-summer-challenge/challenges',
         solutionURL: 'https://pes-alcoding-club.github.io/editorials/',
     },
+    {
+        name: 'Alcoding Summer Challenge 2021',
+        tags: [{ color: 'red', tag: 'summer' }],
+        date: 'May 9 2021',
+        problemsURL:
+            'https://www.hackerrank.com/alcoding-summer-challenge-2021',
+        solutionURL: 'https://pes-alcoding-club.github.io/editorials/',
+    },
 ];
