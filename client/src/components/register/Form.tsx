@@ -12,6 +12,7 @@ import {
 import axios from '../../utils/axios';
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
+import { AxiosError } from 'axios';
 
 const Form = () => {
     const toast = useToast();
@@ -23,77 +24,78 @@ const Form = () => {
     const router = useRouter();
 
     const onSubmit = async (e) => {
-        e.preventDefault();
-        setButtonLoading(true);
-        if (
-            email.replace(/\s/g, '').length == 0 ||
-            name.replace(/\s/g, '').length == 0 ||
-            srn.replace(/\s/g, '').length == 0
-        ) {
-            toast({
-                title: 'Register failed',
-                description: 'Fill out all fields to register.',
-                status: 'error',
-                duration: 9000,
-                isClosable: true,
-            });
-            setButtonLoading(false);
-            return;
-        }
-        await axios
-            .post('/user', {
+        try {
+            e.preventDefault();
+            setButtonLoading(true);
+            if (
+                email.replace(/\s/g, '').length == 0 ||
+                name.replace(/\s/g, '').length == 0 ||
+                srn.replace(/\s/g, '').length == 0
+            ) {
+                toast({
+                    title: 'Register failed',
+                    description: 'Fill out all fields to register.',
+                    status: 'error',
+                    duration: 9000,
+                    isClosable: true,
+                });
+                setButtonLoading(false);
+                return;
+            }
+            await axios.post('/user', {
                 name,
                 email,
                 srn,
                 graduationYear,
                 contestCode: 'JUNE_21',
-            })
-            .then((res) => {
-                setButtonLoading(false);
-                const { err } = res.data;
-                if (err) {
-                    if (err.code === 11000) {
-                        toast({
-                            title: 'Registration failed',
-                            description:
-                                'This email address has already registered for the contest.',
-                            status: 'error',
-                            duration: 5000,
-                            isClosable: true,
-                        });
-                    } else {
-                        toast({
-                            title: 'Registration failed',
-                            description:
-                                'There was some problem while processing your request.\nPlease try again later.',
-                            status: 'error',
-                            duration: 5000,
-                            isClosable: true,
-                        });
-                    }
-                } else {
-                    toast({
-                        title: 'Registration sucessful!',
-                        description:
-                            'We registered your account for the latest contest.',
-                        status: 'success',
-                        duration: 5000,
-                        isClosable: true,
-                    });
-                    router.push('/');
-                }
-            })
-            .catch((err) => {
-                setButtonLoading(false);
+            });
+
+            setButtonLoading(false);
+            toast({
+                title: 'Registration sucessful!',
+                description:
+                    'We registered your account for the latest contest.',
+                status: 'success',
+                duration: 5000,
+                isClosable: true,
+            });
+            router.push('/');
+        } catch ({ response }) {
+            setButtonLoading(false);
+            if (!response) {
                 toast({
                     title: 'Registration failed',
                     description:
-                        'There was some problem while processing your request. Please try again later.',
+                        'There was some problem while processing your request.\nPlease try again later.',
                     status: 'error',
                     duration: 5000,
                     isClosable: true,
                 });
-            });
+            } else {
+                const {
+                    data: { err },
+                } = response;
+                if (err.code === 11000) {
+                    toast({
+                        title: 'Registration failed',
+                        description:
+                            'This email address has already registered for the contest.',
+                        status: 'error',
+                        duration: 5000,
+                        isClosable: true,
+                    });
+                } else {
+                    toast({
+                        title: 'Registration failed',
+                        description:
+                            'There was some problem while processing your request.\nPlease try again later.',
+                        status: 'error',
+                        duration: 5000,
+                        isClosable: true,
+                    });
+                }
+            }
+        }
     };
 
     return (

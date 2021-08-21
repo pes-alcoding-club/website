@@ -4,30 +4,33 @@ import User, { IUser } from './user.model';
 const router = Router();
 
 router.get('/', async (_, res: Response) => {
-    await User.find({}, (err, users: IUser[]) => {
-        res.json({ err, users });
-    });
+    try {
+        const users = await User.find({}).exec();
+        res.status(200).json({ users });
+    } catch (err) {
+        res.status(500).json({ err });
+    }
 });
 
 router.post('/', async (req: Request, res: Response) => {
-    const { name, email, srn, graduationYear, contestCode } = req.body;
-    
-    const user = new User({
-        name,
-        email,
-        srn,
-        graduationYear,
-        contestCode,
-    });
+    try {
+        const { name, email, srn, graduationYear, contestCode } = req.body;
 
-    await user
-        .save()
-        .then(() => res.status(200).json())
-        .catch((err) =>
-            res.json({
-                err,
-            })
-        );
+        const user = new User({
+            name,
+            email,
+            srn,
+            graduationYear,
+            contestCode,
+        });
+
+        await user.save();
+        res.status(200).send();
+    } catch (err) {
+        res.status(500).json({
+            err,
+        });
+    }
 });
 
 export default router;

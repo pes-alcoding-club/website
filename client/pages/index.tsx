@@ -1,4 +1,5 @@
 import { Box } from '@chakra-ui/react';
+import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import React, { useRef } from 'react';
 import Floating from '../src/components/common/Floating';
@@ -8,7 +9,9 @@ import AboutUs from '../src/components/landing/AboutUs';
 import Carousel from '../src/components/landing/Carousel';
 import { images } from '../src/config';
 
-const Landing = () => {
+interface indexProps {}
+
+const index: React.FC<indexProps> = () => {
     const containerRef = useRef();
     return (
         <>
@@ -26,4 +29,8 @@ const Landing = () => {
     );
 };
 
-export default Landing;
+export const getStaticProps: GetStaticProps = async () => ({
+    props: {},
+});
+
+export default index;
