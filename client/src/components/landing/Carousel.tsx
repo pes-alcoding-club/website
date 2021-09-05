@@ -52,6 +52,7 @@ const Carousel: FC<CarouselProps> = ({ data }) => {
                             height="556px"
                             src={src}
                             quality={100}
+                            priority
                         />
                     )}
                 </Box>

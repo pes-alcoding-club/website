@@ -1,5 +1,4 @@
 import { Box } from '@chakra-ui/react';
-import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import React, { useRef } from 'react';
 import Floating from '../src/components/common/Floating';
@@ -17,6 +16,20 @@ const index: React.FC<indexProps> = () => {
         <>
             <Head>
                 <title>The Alcoding Club</title>
+                <meta
+                    name="description"
+                    content="The official Competitive Programming Club under the CSE Department of PES University."
+                />
+                <meta property="og:title" content="The Alcoding Club" />
+                <meta
+                    property="og:description"
+                    content="The official Competitive Programming Club under the CSE Department of PES University."
+                />
+                <meta
+                    property="og:url"
+                    content="https://thealcodingclub.vercel.app/"
+                />
+                <meta property="og:type" content="website" />
             </Head>
             <Box ref={containerRef}>
                 <Header containerRef={containerRef} showApplyBtn />
@@ -28,9 +41,5 @@ const index: React.FC<indexProps> = () => {
         </>
     );
 };
-
-export const getStaticProps: GetStaticProps = async () => ({
-    props: {},
-});
 
 export default index;
