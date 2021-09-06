@@ -12,9 +12,10 @@ import {
 import axios from '../../utils/axios';
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
-import { AxiosError } from 'axios';
 
-const Form = () => {
+interface FormProps {}
+
+const Form: React.FC<FormProps> = () => {
     const toast = useToast();
     const [name, setName] = useState<string>('');
     const [email, setEmail] = useState<string>('');
@@ -47,7 +48,7 @@ const Form = () => {
                 email,
                 srn,
                 graduationYear,
-                contestCode: 'JUNE_21',
+                contestCode: 'SEPT_21',
             });
 
             setButtonLoading(false);
@@ -155,6 +156,7 @@ const Form = () => {
                             <option value="2022">2022</option>
                             <option value="2023">2023</option>
                             <option value="2024">2024</option>
+                            <option value="2025">2025</option>
                         </Select>
                     </FormControl>
                 </Box>

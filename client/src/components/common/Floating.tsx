@@ -3,7 +3,9 @@ import NextLink from 'next/link';
 import React from 'react';
 import MediaQuery from 'react-responsive';
 
-const Floating = () => (
+interface FloatingProps {}
+
+const Floating: React.FC<FloatingProps> = () => (
     <>
         <MediaQuery minDeviceWidth={1224}>
             <Link href="/register" as={NextLink}>
@@ -23,7 +25,7 @@ const Floating = () => (
                     right="30px"
                     fontSize="lg"
                 >
-                    Participate
+                    Apply
                 </Button>
             </Link>
         </MediaQuery>
@@ -49,7 +51,7 @@ const Floating = () => (
                         fontSize="xl"
                         fontWeight="bold"
                     >
-                        Participate in our Monthly Challenge
+                        Apply to our Monthly Challenge
                     </Text>
                 </Box>
             </Link>
