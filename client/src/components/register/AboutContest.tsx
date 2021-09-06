@@ -15,8 +15,8 @@ const AboutContest: React.FC<AboutContestProps> = () => (
         </Heading>
         <Box w={{ xl: '45%', lg: '60%', base: '95%' }} mx="auto">
             <Text fontSize={{ lg: 'xl', base: 'lg' }} my="5" lineHeight="32px">
-                The Alcoding Club, the official Competitive Programming of PES
-                University presents to you, The September Challenge '21!
+                The Alcoding Club, the official Competitive Programming Club of
+                PES University presents to you, The September Challenge '21!
             </Text>
             <Text fontSize={{ lg: 'xl', base: 'lg' }} my="5" lineHeight="32px">
                 Duke it out with your fellow competitors in this three hour
